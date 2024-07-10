@@ -26,30 +26,30 @@ sections:
         - title: English-Korean Interpreter and Translator
           company: Republic of Korea Air Force (military service)
           company_url: https://rokaf.airforce.mil.kr/
-          company_logo: images/ROKAF
+          company_logo: ROKAF.png
           location: Pyeongtaek, Gyeonggi-do, Republic of Korea
-          date_start: '2020-05'
-          date_end: '2022-02'
+          date_start: '2020-05-01'
+          date_end: '2022-02-01'
           description: |2-
               * Worked as an interpreter/translator for the Air Force Operations Command A3, interpreting various operational dialogue between ROK and US air force officers, and translating English USAF documents, doctrines and emails for our ROK members and vice versa.
 
         - title: Research Assistant
           company: Data Design Engineering
           company_url: http://datadesign.engineering/
-          company_logo: images/DDE
+          company_logo: DDE.jpg
           location: Seoul, Republic of Korea
-          date_start: '2022-06'
-          date_end: '2022-08'
+          date_start: '2022-06-01'
+          date_end: '2022-08-01'
           description: |2-
               * Performed research on satellites and their payload, specifically focusing on Earth observation satellites and synthetic aperture radar(SAR).
 
         - title: J.Maple
           company: Research Intern
           company_url: https://jmarple.ai/ko/
-          company_logo: images/JMaple
+          company_logo: JMaple.jpg
           location: Seoul, Republic of Korea
-          date_start: '2023-09'
-          date_end: '2023-12'
+          date_start: '2023-09-01'
+          date_end: '2023-12-01'
           description: |2-
               * Implemented various LiDAR inertial odometry(LIO) algorithms for quadrotor navigation without GPS.
               * Tested the algorithm’s computational and tracking performance using pre‑recorded LiDAR data.
