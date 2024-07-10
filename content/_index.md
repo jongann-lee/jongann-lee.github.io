@@ -26,7 +26,7 @@ sections:
         - title: English-Korean Interpreter and Translator
           company: Republic of Korea Air Force (military service)
           company_url: https://rokaf.airforce.mil.kr/
-          company_logo: images/ROKAF.png
+          company_logo: images/ROKAF
           location: Pyeongtaek, Gyeonggi-do, Republic of Korea
           date_start: '2020-05'
           date_end: '2022-02'
@@ -36,7 +36,7 @@ sections:
         - title: Research Assistant
           company: Data Design Engineering
           company_url: http://datadesign.engineering/
-          company_logo: images/DDE.jpg
+          company_logo: images/DDE
           location: Seoul, Republic of Korea
           date_start: '2022-06'
           date_end: '2022-08'
@@ -46,7 +46,7 @@ sections:
         - title: J.Maple
           company: Research Intern
           company_url: https://jmarple.ai/ko/
-          company_logo: images/JMaple.png
+          company_logo: images/JMaple
           location: Seoul, Republic of Korea
           date_start: '2023-09'
           date_end: '2023-12'
