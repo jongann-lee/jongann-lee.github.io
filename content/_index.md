@@ -82,28 +82,37 @@ sections:
           date_end: ''
           date_start: '2023-02-01'
           description: ''
-          icon: images/kwanjeong.svg
+          icon: ''
           organization: Kwanjeong Educational Foundation
           organization_url: https://www.ikef.or.kr/
           title: Kwanjeong Domestic Undergraduate Scholarship
           url: ''
-        - certificate_url: https://www.edx.org
+        - certificate_url: ''
           date_end: ''
-          date_start: '2021-01-01'
-          description: Formulated informed blockchain models, hypotheses, and use cases.
-          icon: edx
-          organization: edX
-          organization_url: https://www.edx.org
-          title: Blockchain Fundamentals
-          url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
-        - certificate_url: https://www.datacamp.com
-          date_end: '2020-12-21'
-          date_start: '2020-07-01'
+          date_start: '2022-09-01'
+          description: 
+          icon: ''
+          organization: Boeing Korea
+          organization_url: https://www.boeing.co.kr/
+          title: Boeing Korea Scholarship
+          url: ''
+        - certificate_url: 
+          date_end: 
+          date_start: '2019-09-01'
           description: ''
-          icon: datacamp
-          organization: DataCamp
-          organization_url: https://www.datacamp.com
-          title: 'Object-Oriented Programming in R'
+          icon: ''
+          organization: Seoul National University College of Engineering
+          organization_url: https://www.boeing.co.kr/
+          title: College of Engineering Scholarship for Academic Excellence
+          url: ''
+        - certificate_url: ''
+          date_end: ''
+          date_start: '2018-03-01'
+          description: ''
+          icon: ''
+          organization: Hanseong Sonjaehan Scholarship Foundation
+          organization_url: https://www.sonjaehan.com/
+          title: Hanseong Nobel Prodigy Scholarship
           url: ''
     design:
       columns: '2'
@@ -114,7 +123,7 @@ sections:
       subtitle: ''
       text: ''
       # Choose how many pages you would like to display (0 = all pages)
-      count: 5
+      count: 3
       # Filter on criteria
       filters:
         folders:
