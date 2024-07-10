@@ -1,6 +1,6 @@
 ---
 title: Reinforcement Learning based Tuner for the Geometric Tracking Attitude Controller
-summary: A reinforce learning algorithm designed to tune the attitude controller gains for the geometric tracking controller for the quadrotor.
+summary: A reinforcement learning algorithm designed to tune the attitude controller gains for the geometric tracking controller for the quadrotor.
 tags:
   - Reinforcement Learning
 date: '2024-06-05'
@@ -9,15 +9,11 @@ date: '2024-06-05'
 external_link: ''
 
 image:
-  caption: 
-  focal_point:
+  caption: ''
+  focal_point: ''
 
-url_code:
-  - icon: github
-  - icon_pack: fab
-  - link: https://github.com/jongann-lee/RL-Tuner-Geo-Quad-Controller
-url_pdf:
-  - link: uploads/RL_tuner.pdf
+url_code: https://github.com/jongann-lee/RL-Tuner-Geo-Quad-Controller
+url_pdf: uploads/RL_tuner.pdf
 url_slides: ''
 url_video: ''
 
