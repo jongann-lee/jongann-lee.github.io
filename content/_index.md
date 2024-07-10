@@ -53,12 +53,22 @@ sections:
           description: |2-
               * Implemented various LiDAR inertial odometry(LIO) algorithms for quadrotor navigation without GPS.
               * Tested the algorithm’s computational and tracking performance using pre‑recorded LiDAR data.
+
+        - title: Interactive and Networked Robotics Laboratory(Prof. Dongjun Lee)
+          company: Undergraduate Intern
+          company_url: https://www.inrol.snu.ac.kr/
+          company_logo: INRoL
+          location: Seoul, Republic of Korea
+          date_start: '2023-03-01'
+          date_end: 
+          description: |2-
+              * Created a novel adaptive quadrotor controller by adapting an adaptive control scheme based on the geodesic distance of the manifold of physically consistent inertial parameters, to the geometric tracking controller. 
     design:
       columns: '2'
   - block: accomplishments
     content:
       # Note: `&shy;` is used to add a 'soft' hyphen in a long heading.
-      title: 'Accomplish&shy;ments'
+      title: 'Honors'
       subtitle:
       # Date format: https://docs.hugoblox.com/customization/#date-format
       date_format: Jan 2006
@@ -68,14 +78,14 @@ sections:
       #   Leave other parameters empty if not required.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - certificate_url: https://www.coursera.org
+        - certificate_url: ''
           date_end: ''
-          date_start: '2021-01-25'
+          date_start: '2023-02-01'
           description: ''
-          icon: coursera
-          organization: Coursera
-          organization_url: https://www.coursera.org
-          title: Neural Networks and Deep Learning
+          icon: images/kwanjeong
+          organization: Kwanjeong Educational Foundation
+          organization_url: https://www.ikef.or.kr/
+          title: Kwanjeong Domestic Undergraduate Scholarship
           url: ''
         - certificate_url: https://www.edx.org
           date_end: ''
