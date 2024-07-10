@@ -1,7 +1,7 @@
 ---
 # Leave the homepage title empty to use the site title
 title: ''
-date: 2022-10-24
+date: 2024-07-10
 type: landing
 
 sections:
@@ -23,27 +23,36 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: CEO
-          company: GenCoin
-          company_url: ''
-          company_logo: org-gc
-          location: California
-          date_start: '2021-01-01'
-          date_end: ''
+        - title: English-Korean Interpreter and Translator
+          company: Republic of Korea Air Force (military service)
+          company_url: https://rokaf.airforce.mil.kr/
+          company_logo: images/ROKAF.png
+          location: Pyeongtaek, Gyeonggi-do, Republic of Korea
+          date_start: '2020-05'
+          date_end: '2022-02'
           description: |2-
-              Responsibilities include:
+              * Worked as an interpreter/translator for the Air Force Operations Command A3, interpreting various operational dialogue between ROK and US air force officers, and translating English USAF documents, doctrines and emails for our ROK members and vice versa.
 
-              * Analysing
-              * Modelling
-              * Deploying
-        - title: Professor of Semiconductor Physics
-          company: University X
-          company_url: ''
-          company_logo: org-x
-          location: California
-          date_start: '2016-01-01'
-          date_end: '2020-12-31'
-          description: Taught electronic engineering and researched semiconductor physics.
+        - title: Research Assistant
+          company: Data Design Engineering
+          company_url: http://datadesign.engineering/
+          company_logo: images/DDE.jpg
+          location: Seoul, Republic of Korea
+          date_start: '2022-06'
+          date_end: '2022-08'
+          description: |2-
+              * Performed research on satellites and their payload, specifically focusing on Earth observation satellites and synthetic aperture radar(SAR).
+
+        - title: J.Maple
+          company: Research Intern
+          company_url: https://jmarple.ai/ko/
+          company_logo: images/JMaple.png
+          location: Seoul, Republic of Korea
+          date_start: '2023-09'
+          date_end: '2023-12'
+          description: |2-
+              * Implemented various LiDAR inertial odometry(LIO) algorithms for quadrotor navigation without GPS.
+              * Tested the algorithm’s computational and tracking performance using pre‑recorded LiDAR data.
     design:
       columns: '2'
   - block: accomplishments
@@ -167,10 +176,7 @@ sections:
     design:
       columns: '2'
       view: citation
-  - block: contact
-    # not used for now; I'm not a professor
-    
-    
+  - block: contact    
     id: contact
     content:
       title: Contact
@@ -189,18 +195,10 @@ sections:
         latitude: '37.4497'
         longitude: '126.9523'  
       contact_links:
-        - icon: twitter
+        - icon: linkedin
           icon_pack: fab
-          name: DM Me
-          link: 'https://twitter.com/Twitter'
-        - icon: skype
-          icon_pack: fab
-          name: Skype Me
-          link: 'skype:echo123?call'
-        - icon: video
-          icon_pack: fas
-          name: Zoom Me
-          link: 'https://zoom.com'
+          name: LinkedIn
+          link: www.linkedin.com/in/jongann-lee
       # Automatically link email and phone or display as text?
       autolink: true
       # Email form provider
