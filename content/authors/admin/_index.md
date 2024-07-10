@@ -32,6 +32,7 @@ interests:
   - Control Systems Engineering
   - Reinforcement Learning
   - SLAM
+  - Robotics
 
 # Education to show in About widget
 education:
