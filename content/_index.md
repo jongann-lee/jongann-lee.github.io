@@ -82,7 +82,7 @@ sections:
           date_end: ''
           date_start: '2023-02-01'
           description: ''
-          icon: images/kwanjeong
+          icon: images/kwanjeong.svg
           organization: Kwanjeong Educational Foundation
           organization_url: https://www.ikef.or.kr/
           title: Kwanjeong Domestic Undergraduate Scholarship
