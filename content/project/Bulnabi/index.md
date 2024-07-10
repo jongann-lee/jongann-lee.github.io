@@ -8,7 +8,7 @@ date: '2023-08-01'
 # Optional external URL for project (replaces project detail page).
 external_link: ''
 
-image: images/competition_diagram.png
+image: competition_diagram.png
   caption: 'Diagram showing the mission of the 2023 Korea Robot Aircraft Competition'
   focal_point: ''
 
