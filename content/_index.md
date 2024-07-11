@@ -43,8 +43,8 @@ sections:
           description: |2-
               * Performed research on satellites and their payload, specifically focusing on Earth observation satellites and synthetic aperture radar(SAR).
 
-        - title: J.Maple
-          company: Research Intern
+        - title: Research Intern
+          company: J.Maple
           company_url: https://jmarple.ai/ko/
           company_logo: JMaple
           location: Seoul, Republic of Korea
@@ -54,8 +54,8 @@ sections:
               * Implemented various LiDAR inertial odometry(LIO) algorithms for quadrotor navigation without GPS.
               * Tested the algorithm’s computational and tracking performance using pre‑recorded LiDAR data.
 
-        - title: Interactive and Networked Robotics Laboratory(Prof. Dongjun Lee)
-          company: Undergraduate Intern
+        - title: Undergraduate Intern
+          company: Interactive and Networked Robotics Laboratory(Prof. Dongjun Lee)
           company_url: https://www.inrol.snu.ac.kr/
           company_logo: SNU
           location: Seoul, Republic of Korea
