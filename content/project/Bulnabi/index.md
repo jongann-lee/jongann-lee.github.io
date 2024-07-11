@@ -10,8 +10,8 @@ date: '2023-08-01'
 # Optional external URL for project (replaces project detail page).
 external_link: ''
 
-image: competition_diagram.png
-  caption: 'Diagram showing the mission of the 2023 Korea Robot Aircraft Competition'
+image: 
+  caption: Diagram showing the mission of the 2023 Korea Robot Aircraft Competition
   focal_point: ''
 
 url_code: ''
@@ -24,7 +24,7 @@ url_video: ''
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
-slides: ''
+slides: ""
 ---
 
 During my undergraduate studies, I was a member, and later president, of the Seoul National University drone club Bulnabi. Over the years, I have participated in many projects within the club, but the 2023 Korea Robot Aircraft Competition is the one that I worked on the hardest, and therefore I chose to discuss it here.
