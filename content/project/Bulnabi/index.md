@@ -2,7 +2,9 @@
 title: Autonomous Quadrotor System for Payload Delivery
 summary: created an autonomous quadrotor capable of detecting and avoiding obstacles, automatically landing on a designated landing area, detecting a pre‑determined delivery point and delivering a payload to it.
 tags:
-  - Quadrotor, PX4-Autopilot, ROS2
+  - Quadrotor 
+  - PX4-Autopilot
+  - ROS2
 date: '2023-08-01'
 
 # Optional external URL for project (replaces project detail page).
