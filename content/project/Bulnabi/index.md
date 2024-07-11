@@ -13,7 +13,7 @@ image: 'competition_diagram.png'
   focal_point: ''
 
 url_code: ''
-url_pdf: uploads/RL_tuner.pdf
+url_pdf: bulnabi.pdf
 url_slides: ''
 url_video: ''
 
