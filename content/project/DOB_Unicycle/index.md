@@ -12,7 +12,7 @@ date: '2023-12-01'
 external_link: ''
 
 image: 
-  caption: Diagram showing the mission of the 2023 Korea Robot Aircraft Competition
+  caption: Unicycle model used to create the controller
   focal_point: ''
 
 url_code: https://github.com/jongann-lee/DOB-for-Unicycle

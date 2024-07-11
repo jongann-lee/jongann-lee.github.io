@@ -9,7 +9,7 @@ date: '2024-06-05'
 external_link: ''
 
 image:
-  caption: ''
+  caption: Controller diagram of the RL tuner
   focal_point: ''
 
 url_code: https://github.com/jongann-lee/RL-Tuner-Geo-Quad-Controller
