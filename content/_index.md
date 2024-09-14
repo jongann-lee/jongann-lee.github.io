@@ -64,7 +64,7 @@ sections:
           description: |2-
               * Created a novel adaptive quadrotor controller by adapting an adaptive control scheme based on the geodesic distance of the manifold of physically consistent inertial parameters, to the geometric tracking controller. 
 
-          - title: Research Intern
+        - title: Research Intern
           company: Polytechnique Laboratory for Assistive and Rehabilitation technologies (Prof. Abolfazl Mohebbi)
           company_url: https://www.polarlab.ca/about
           company_logo: polymtl
