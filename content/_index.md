@@ -60,9 +60,19 @@ sections:
           company_logo: SNU
           location: Seoul, Republic of Korea
           date_start: '2023-03-01'
-          date_end: 
+          date_end: '2024-06-14'
           description: |2-
               * Created a novel adaptive quadrotor controller by adapting an adaptive control scheme based on the geodesic distance of the manifold of physically consistent inertial parameters, to the geometric tracking controller. 
+
+          - title: Research Intern
+          company: Polytechnique Laboratory for Assistive and Rehabilitation technologies (Prof. Abolfazl Mohebbi)
+          company_url: https://www.polarlab.ca/about
+          company_logo: polymtl
+          location: Montréal, QC, Canada
+          date_start: '2024-06-15'
+          date_end: '2024-10-14'
+          description: |2-
+              * Created a 2-DoF ankle exoskeleton using compliant mechanisms to allow the user's foot to perform inversion and eversion.
     design:
       columns: '2'
   - block: accomplishments
