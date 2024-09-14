@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Jongann "Johnny" Lee
+title: Jongann Lee
 
 # Name pronunciation (optional)
 name_pronunciation: ''
@@ -29,10 +29,10 @@ bio: Life long enthusiasts of all mobilities, be it planes, cars or trains.
 
 # Interests to show in About widget
 interests:
+  - Mobile Robotics
   - Control Systems Engineering
   - Reinforcement Learning
-  - SLAM
-  - Robotics
+  - Safety in Control
 
 # Education to show in About widget
 education:
