@@ -23,26 +23,26 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: English-Korean Interpreter and Translator
-          company: Republic of Korea Air Force (military service)
-          company_url: https://rokaf.airforce.mil.kr/
-          company_logo: ROKAF
-          location: Pyeongtaek, Gyeonggi-do, Republic of Korea
-          date_start: '2020-05-01'
-          date_end: '2022-02-01'
+        - title: Visiting Researcher
+          company: Polytechnique Laboratory for Assistive and Rehabilitation technologies (Prof. Abolfazl Mohebbi)
+          company_url: https://www.polarlab.ca/about
+          company_logo: polymtl
+          location: Montréal, QC, Canada
+          date_start: '2024-06-15'
+          date_end: '2024-10-14'
           description: |2-
-              * Worked as an interpreter/translator for the Air Force Operations Command A3, interpreting various operational dialogue between ROK and US air force officers, and translating English USAF documents, doctrines and emails for our ROK members and vice versa.
+              * Created a 2-DoF ankle exoskeleton using compliant mechanisms to allow the user's foot to perform inversion and eversion.
 
-        - title: Research Assistant
-          company: Data Design Engineering
-          company_url: http://datadesign.engineering/
-          company_logo: DDE
+        - title: Undergraduate Intern
+          company: Interactive and Networked Robotics Laboratory(Prof. Dongjun Lee)
+          company_url: https://www.inrol.snu.ac.kr/
+          company_logo: SNU
           location: Seoul, Republic of Korea
-          date_start: '2022-06-01'
-          date_end: '2022-08-01'
+          date_start: '2023-03-01'
+          date_end: '2024-06-14'
           description: |2-
-              * Performed research on satellites and their payload, specifically focusing on Earth observation satellites and synthetic aperture radar(SAR).
-
+              * Created a novel adaptive quadrotor controller by adapting an adaptive control scheme based on the geodesic distance of the manifold of physically consistent inertial parameters, to the geometric tracking controller. 
+        
         - title: Research Intern
           company: J.Maple
           company_url: https://jmarple.ai/ko/
@@ -54,25 +54,30 @@ sections:
               * Implemented various LiDAR inertial odometry(LIO) algorithms for quadrotor navigation without GPS.
               * Tested the algorithm’s computational and tracking performance using pre‑recorded LiDAR data.
 
-        - title: Undergraduate Intern
-          company: Interactive and Networked Robotics Laboratory(Prof. Dongjun Lee)
-          company_url: https://www.inrol.snu.ac.kr/
-          company_logo: SNU
+        - title: Research Assistant
+          company: Data Design Engineering
+          company_url: http://datadesign.engineering/
+          company_logo: DDE
           location: Seoul, Republic of Korea
-          date_start: '2023-03-01'
-          date_end: '2024-06-14'
+          date_start: '2022-06-01'
+          date_end: '2022-08-01'
           description: |2-
-              * Created a novel adaptive quadrotor controller by adapting an adaptive control scheme based on the geodesic distance of the manifold of physically consistent inertial parameters, to the geometric tracking controller. 
+              * Performed research on satellites and their payload, specifically focusing on Earth observation satellites and synthetic aperture radar(SAR).
 
-        - title: Research Intern
-          company: Polytechnique Laboratory for Assistive and Rehabilitation technologies (Prof. Abolfazl Mohebbi)
-          company_url: https://www.polarlab.ca/about
-          company_logo: polymtl
-          location: Montréal, QC, Canada
-          date_start: '2024-06-15'
-          date_end: '2024-10-14'
+        - title: English-Korean Interpreter and Translator
+          company: Republic of Korea Air Force (military service)
+          company_url: https://rokaf.airforce.mil.kr/
+          company_logo: ROKAF
+          location: Pyeongtaek, Gyeonggi-do, Republic of Korea
+          date_start: '2020-05-01'
+          date_end: '2022-02-01'
           description: |2-
-              * Created a 2-DoF ankle exoskeleton using compliant mechanisms to allow the user's foot to perform inversion and eversion.
+              * Worked as an interpreter/translator for the Air Force Operations Command A3, interpreting various operational dialogue between ROK and US air force officers, and translating English USAF documents, doctrines and emails for our ROK members and vice versa.
+
+        
+
+        
+
     design:
       columns: '2'
   - block: accomplishments
