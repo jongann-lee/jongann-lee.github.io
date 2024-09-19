@@ -74,10 +74,6 @@ sections:
           description: |2-
               * Worked as an interpreter/translator for the Air Force Operations Command A3, interpreting various operational dialogue between ROK and US air force officers, and translating English USAF documents, doctrines and emails for our ROK members and vice versa.
 
-        
-
-        
-
     design:
       columns: '2'
   - block: accomplishments

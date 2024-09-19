@@ -43,7 +43,7 @@ url_pdf: http://arxiv.org/pdf/1512.04133v1
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: 'I3D diagram of an example 5-CDoF multirotorwith rotors capable of tilting synchronously'
+  caption: '3D diagram of an example 5-CDoF multirotorwith rotors capable of tilting synchronously'
   focal_point: ""
   preview_only: false
 
@@ -63,8 +63,8 @@ projects:
 slides: ""
 ---
 
-{{% callout note %}}
+<!-- {{% callout note %}}
 Create your slides in Markdown - click the *Slides* button to check out the example.
-{{% /callout %}}
+{{% /callout %}} -->
 
-Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/).
+<!-- Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/). -->
