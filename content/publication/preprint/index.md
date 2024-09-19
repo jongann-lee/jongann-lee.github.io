@@ -1,12 +1,14 @@
 ---
-title: "An example preprint / working paper"
+title: "Geometric Tracking Controller for a 5 Control Degrees of Freedom Multirotor UAV"
 authors:
 - admin
-date: "2019-04-07T00:00:00Z"
+- Taekyun Kim
+- Dongjun Lee
+date: "2024-09-19"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2017-01-01T00:00:00Z"
+publishDate: "2024-09-19"
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
@@ -17,31 +19,31 @@ publication_types: ["article"]
 publication: ""
 publication_short: ""
 
-abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+abstract: This paper introduces a controller for the tracking control of a multirotor UAV with 5 control degrees of freedom (CDoF), which is capable of generating three-dimensional torque about its center of mass and thrusts in both the upward and forward directions of the vehicle. This vehicle design offers several advantages over traditional multirotors, including the ability to exert a frontal force without changing attitude, which is beneficial for aerial manipulation, and the capability to orient the front of the vehicle in any direction, making it ideal for surveillance applications. We show that the 5-CDoF multirotor system dynamics is differentially flat with its center of mass position, yaw angle and pitch angle being the flat outputs. To track trajectories of the flat outputs, we propose a geometric tracking controller based on the nonlinear SE(3) dynamics of the vehicle, which makes the controller free of linearization errors and singularities. The controller exhibits desirable closed-loop properties, with the ability to recover from a near-inverted attitude, which is proven using Lyapunov analysis. A numerical simulation of the controller showcases the stability and efficacy of the proposed controller.
 
 # Summary. An optional shortened abstract.
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
+summary: ""
 
 tags:
 - Source Themes
 featured: false
 
 links:
-- name: Custom Link
-  url: http://example.org
+#- name: Custom Link
+#  url: http://example.org
 url_pdf: http://arxiv.org/pdf/1512.04133v1
-url_code: 'https://github.com/HugoBlox/hugo-blox-builder'
-url_dataset: '#'
-url_poster: '#'
-url_project: ''
-url_slides: ''
-url_source: '#'
-url_video: '#'
+#url_code: 'https://github.com/HugoBlox/hugo-blox-builder'
+#url_dataset: '#'
+#url_poster: '#'
+#url_project: ''
+#url_slides: ''
+#url_source: '#'
+#url_video: '#'
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/s9CC2SKySJM)'
+  caption: 'I3D diagram of an example 5-CDoF multirotorwith rotors capable of tilting synchronously'
   focal_point: ""
   preview_only: false
 
@@ -51,14 +53,14 @@ image:
 #   E.g. `internal-project` references `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
 projects:
-- internal-project
+- []
 
 # Slides (optional).
 #   Associate this publication with Markdown slides.
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
-slides: example
+slides: ""
 ---
 
 {{% callout note %}}
