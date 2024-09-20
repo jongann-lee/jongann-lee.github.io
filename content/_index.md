@@ -184,7 +184,7 @@ sections:
   - block: collection
     content:
       title: Publications
-      count: 1
+      count: 3
       filters:
         folders:
           - publication
