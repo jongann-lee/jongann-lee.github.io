@@ -25,7 +25,7 @@ organizations:
     url: https://eng.snu.ac.kr/
 
 # Short bio (displayed in user profile at end of posts)
-bio: Life long enthusiasts of all mobilities, be it planes, cars or trains.
+bio: An undergraduate student at Seoul National University, studying aerospace engineering.
 
 # Interests to show in About widget
 interests:
@@ -37,7 +37,7 @@ interests:
 # Education to show in About widget
 education:
   courses:
-    - course: B.S.E. in Mechanical and Aerospace Engineering
+    - course: B.S. in Mechanical and Aerospace Engineering
       institution: Seoul National University
       year: 2025
     - course: Early Graduation with Magna Cum Laude
@@ -76,5 +76,10 @@ highlight_name: true
 
 Welcome to my webpage!
 
-I'm an avid engineer interested in aircraft, drones, control systems and lots more. Here you can take a look at my past projects and see what I'm up to.
+I'm an aerospace engineer with an inherent love for vehicles like aircraft, cars, and trains. Currently I'm interested mobile robotics, reinforcement learning, safety in control, and in a more general sense, autonomy.
+
+I am currently pursuing an undergraduate degree in aerospace engineering at Seoul National University. There I conducted research on various novel controllers for autonomous aerial vehicles under the guidance of Professor Dongjun Lee. I was also president of the drone club, where I participated in the Korea robot aircraft competition.
+
+Please feel free to reach me out!
+
 {style="text-align: justify;"}
