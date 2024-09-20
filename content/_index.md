@@ -187,8 +187,6 @@ sections:
       filters:
         folders:
           - publication
-        property: 'id'
-        value: 'preprint'
     design:
       columns: '2'
       view: citation
