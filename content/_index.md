@@ -31,7 +31,8 @@ sections:
           date_start: '2024-06-15'
           date_end: '2024-10-14'
           description: |2-
-              * Created a 2-DoF ankle exoskeleton using compliant mechanisms to allow the user's foot to perform inversion and eversion.
+              * Designed a novel 2‑DoF ankle exoskeletonwith a compliantmechanism to enable inversion and eversionmovements aswell as dorsiflexion and plantarflexion.
+              * Built a prototype using 3D printing and integrated it with the existing PERL ankle exoskeleton to confirm the desired performance
 
         - title: Undergraduate Intern
           company: Interactive and Networked Robotics Laboratory(Prof. Dongjun Lee)
@@ -41,6 +42,8 @@ sections:
           date_start: '2023-03-01'
           date_end: '2024-06-14'
           description: |2-
+              * Created a geometric tracking controller for the 5‑CDoF multirotor capable of tracking a 5‑variable trajectory consisting of position, yaw, and pitch, which was shown to be differentially flat outputs of the vehicle dynamics.
+              *  Proved the almost global exponential attractiveness of the controlled vehicle dynamics using Lyapunov analysis, and demonstrated the stability using a Matlab numerical simulation.
               * Created a novel adaptive quadrotor controller by adapting an adaptive control scheme based on the geodesic distance of the manifold of physically consistent inertial parameters, to the geometric tracking controller. 
         
         - title: Research Intern
@@ -73,6 +76,34 @@ sections:
           date_end: '2022-02-01'
           description: |2-
               * Worked as an interpreter/translator for the Air Force Operations Command A3, interpreting various operational dialogue between ROK and US air force officers, and translating English USAF documents, doctrines and emails for our ROK members and vice versa.
+  
+  - block: portfolio
+  id: projects
+  content:
+    title: Projects
+    filters:
+      folders:
+        - project
+    # Default filter index (e.g. 0 corresponds to the first `filter_button` instance below).
+    # default_button_index: 0
+    # Filter toolbar (optional).
+    # Add or remove as many filters (`filter_button` instances) as you like.
+    # To show all items, set `tag` to "*".
+    # To filter by a specific tag, set `tag` to an existing tag name.
+    # To remove the toolbar, delete the entire `filter_button` block.
+    # buttons:
+    #   - name: All
+    #     tag: '*'
+    #   - name: Deep Learning
+    #     tag: Deep Learning
+    #   - name: Other
+    #     tag: Demo
+  design:
+    # Choose how many columns the section has. Valid values: '1' or '2'.
+    columns: '1'
+    view: showcase
+    # For Showcase view, flip alternate rows?
+    flip_alt_rows: false
 
     design:
       columns: '2'
@@ -154,33 +185,7 @@ sections:
   #     # Choose a layout view
   #     view: compact
   #     columns: '2'
-  - block: portfolio
-    id: projects
-    content:
-      title: Projects
-      filters:
-        folders:
-          - project
-      # Default filter index (e.g. 0 corresponds to the first `filter_button` instance below).
-      # default_button_index: 0
-      # Filter toolbar (optional).
-      # Add or remove as many filters (`filter_button` instances) as you like.
-      # To show all items, set `tag` to "*".
-      # To filter by a specific tag, set `tag` to an existing tag name.
-      # To remove the toolbar, delete the entire `filter_button` block.
-      # buttons:
-      #   - name: All
-      #     tag: '*'
-      #   - name: Deep Learning
-      #     tag: Deep Learning
-      #   - name: Other
-      #     tag: Demo
-    design:
-      # Choose how many columns the section has. Valid values: '1' or '2'.
-      columns: '1'
-      view: showcase
-      # For Showcase view, flip alternate rows?
-      flip_alt_rows: false
+
   - block: collection
     content:
       title: Publications

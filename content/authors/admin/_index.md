@@ -40,7 +40,7 @@ education:
     - course: B.S. in Mechanical and Aerospace Engineering
       institution: Seoul National University
       year: 2025
-    - course: Early Graduation with Magna Cum Laude
+    - course: Early Graduation (top 10% of class)
       institution: Sejong Science High School
       year: 2019
 
@@ -78,8 +78,8 @@ Welcome to my webpage!
 
 I'm an aerospace engineer with an inherent love for vehicles like aircraft, cars, and trains. Currently I'm interested mobile robotics, reinforcement learning, safety in control, and in a more general sense, autonomy.
 
-I am currently pursuing an undergraduate degree in aerospace engineering at Seoul National University. There I conducted research on various novel controllers for autonomous aerial vehicles under the guidance of Professor Dongjun Lee. I was also president of the drone club, where I participated in the Korea robot aircraft competition.
+I am currently pursuing an undergraduate degree in aerospace engineering at Seoul National University. There I conducted research on various novel controllers for autonomous aerial vehicles under the guidance of Professor Dongjun Lee. I was also president of the drone club Bulnabi, where I participated in the Korea robot aircraft competition.
 
-Please feel free to reach me out!
+Please feel free to reach out!
 
 {style="text-align: justify;"}
