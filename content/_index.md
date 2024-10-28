@@ -48,7 +48,7 @@ sections:
         
         - title: Research Intern
           company: J.Maple
-          company_url: https://jmarple.ai/ko/
+          company_url: https://jmarple.ai
           company_logo: JMaple
           location: Seoul, Republic of Korea
           date_start: '2023-09-01'
