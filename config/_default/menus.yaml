@@ -7,18 +7,15 @@ main:
   - name: Home
     url: '#about'
     weight: 10
-  - name: Posts
-    url: '#posts'
-    weight: 20
   - name: Projects
     url: '#projects'
-    weight: 30
+    weight: 20
   - name: Publications
-    url: '#featured'
-    weight: 40
+    url: '#publications'
+    weight: 30
   - name: Contact
     url: '#contact'
-    weight: 50
+    weight: 40
   - name: CV
-    url: uploads/Actual_CV.pdf
-    weight: 60
+    url: uploads/JongannLee_CV.pdf
+    weight: 50
