@@ -47,7 +47,7 @@ sections:
               * Created a novel adaptive quadrotor controller by adapting an adaptive control scheme based on the geodesic distance of the manifold of physically consistent inertial parameters, to the geometric tracking controller. 
         
         - title: Research Intern
-          company: J.Maple
+          company: J.Marple
           company_url: https://jmarple.ai
           company_logo: JMaple
           location: Seoul, Republic of Korea
