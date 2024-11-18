@@ -31,8 +31,8 @@ sections:
           date_start: '2024-06-15'
           date_end: '2024-10-14'
           description: |2-
-              * Designed a novel 2‑DoF ankle exoskeletonwith a compliantmechanism to enable inversion and eversionmovements aswell as dorsiflexion and plantarflexion.
-              * Built a prototype using 3D printing and integrated it with the existing PERL ankle exoskeleton to confirm the desired performance
+              * Designed a novel 2 degrees of freedom ankle joint mechanism using a compliant mechanism to enable inversion and eversion movements as well as dorsiflexion and plantarflexion.
+              * Built a prototype using a 3D printer and integrated it with the existing PERL ankle exoskeleton to confirm the mechanism's performance
 
         - title: Undergraduate Intern
           company: Interactive and Networked Robotics Laboratory(Prof. Dongjun Lee)
@@ -44,7 +44,7 @@ sections:
           description: |2-
               * Created a geometric tracking controller for the 5‑CDoF multirotor capable of tracking a 5‑variable trajectory consisting of position, yaw, and pitch, which was shown to be differentially flat outputs of the vehicle dynamics.
               *  Proved the almost global exponential attractiveness of the controlled vehicle dynamics using Lyapunov analysis, and demonstrated the stability using a Matlab numerical simulation.
-              * Created a novel adaptive quadrotor controller by adapting an adaptive control scheme based on the geodesic distance of the manifold of physically consistent inertial parameters, to the geometric tracking controller. 
+              * Designed an adaptive quadrotor controller by augmenting the geometric tracking controller for the quadrotor with an adaptive control law based on the geodesic distance of the manifold of physically consistent inertial parameters.
         
         - title: Research Intern
           company: J.Marple

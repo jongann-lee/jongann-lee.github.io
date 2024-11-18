@@ -37,7 +37,7 @@ interests:
 # Education to show in About widget
 education:
   courses:
-    - course: B.S. in Mechanical and Aerospace Engineering
+    - course: B.E. in Mechanical and Aerospace Engineering
       institution: Seoul National University
       year: 2025
     - course: Early Graduation (top 10% of class)
