@@ -19,17 +19,7 @@ publication_types: ["article"]
 publication: "International Journal of Control, Automation, and Systems"
 publication_short: "IJCAS"
 
-abstract:  This paper introduces a controller for the tracking control of a multirotor UAV with collective pitch
-tilting, which is capable of generating three-dimensional torque and thrusts in both the upward and forward direc
-tions of the vehicle. This vehicle design offers several advantages over traditional multirotors, including the ability
- to exert a frontal force without changing attitude, which is beneficial for aerial manipulation, and the capability to
- orient the front of the vehicle in any direction, making it ideal for surveillance applications. We show that the system
- dynamics of the multirotor with collective pitch-tilting is differentially flat with its center of mass position, yaw an
-gle, and pitch angle being the flat outputs. To track trajectories of the flat outputs, we propose a geometric tracking
- controller based on the nonlinear SE(3) dynamics of the vehicle, which makes the controller free of linearization
- errors and singularities. The controller exhibits desirable closed-loop properties, with the ability to recover from a
- near-inverted attitude, which is proven using Lyapunov analysis. A numerical simulation of the controller showcases
- the stability and efficacy of the proposed controller.
+abstract:  This paper introduces a controller for the tracking control of a multirotor UAV with collective pitch tilting, which is capable of generating three-dimensional torque and thrusts in both the upward and forward directions of the vehicle. This vehicle design offers several advantages over traditional multirotors, including the ability to exert a frontal force without changing attitude, which is beneficial for aerial manipulation, and the capability to orient the front of the vehicle in any direction, making it ideal for surveillance applications. We show that the system dynamics of the multirotor with collective pitch-tilting is differentially flat with its center of mass position, yaw angle, and pitch angle being the flat outputs. To track trajectories of the flat outputs, we propose a geometric tracking controller based on the nonlinear SE(3) dynamics of the vehicle, which makes the controller free of linearization errors and singularities. The controller exhibits desirable closed-loop properties, with the ability to recover from a near-inverted attitude, which is proven using Lyapunov analysis. A numerical simulation of the controller showcases the stability and efficacy of the proposed controller.
 
 # Summary. An optional shortened abstract.
 summary: ""
