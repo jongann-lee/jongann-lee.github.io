@@ -30,4 +30,4 @@ Inversion and eversion is the rotation of the foot about the axis parallel to th
 
 The primary feature of this mechanism is the compliant mechanism based joint. Typical revolute joints use bearings and pins to create the rotational degree of freedom, but this increases the complexity and manufacturing and maintaining the joint. PIEJAM uses compliant mechanisms, which are flexible mechanisms that achieve force and motion transmission through elastic body deformation. It has been implemented in the form of a x-shaped cross-axis flexural pivot, which enables the rotational motion and at the same time provides adverse torque feedback like a torsional spring. The overall joint mechanism designs also limits the range of motion, which is important for preventing injuries. 
 
-A test of using PIEJAM with PERL showed that the desired inversion and eversion movenemt charactertistics while not comprimising the requirements for dorsalflexion and plantarflexion actuation. 
+A test of using PIEJAM with PERL showed that the desired inversion and eversion movement characteristics while not comprimising the requirements for dorsiflexion and plantarflexion actuation. 
