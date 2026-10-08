@@ -100,13 +100,11 @@ sections:
       #     tag: Demo
     design:
       # Choose how many columns the section has. Valid values: '1' or '2'.
-      columns: '1'
+      columns: '2'
       view: showcase
       # For Showcase view, flip alternate rows?
       flip_alt_rows: false
 
-    design:
-      columns: '2'
   - block: accomplishments
     content:
       # Note: `&shy;` is used to add a 'soft' hyphen in a long heading.
@@ -220,7 +218,7 @@ sections:
         - icon: linkedin
           icon_pack: fab
           name: LinkedIn
-          link: www.linkedin.com/in/jongann-lee
+          link: https://www.linkedin.com/in/jongann-lee
       # Automatically link email and phone or display as text?
       autolink: true
       # Email form provider

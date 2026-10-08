@@ -51,7 +51,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: johnny3357@snu.ac.kr
+    link: mailto:johnny3357@snu.ac.kr
   - icon: instagram
     icon_pack: fab
     link: https://www.instagram.com/sp_j0hnny/
@@ -62,7 +62,7 @@ social:
     link: https://github.com/jongann-lee
   - icon: linkedin
     icon_pack: fab
-    link: www.linkedin.com/in/jongann-lee
+    link: https://www.linkedin.com/in/jongann-lee
   # Link to a PDF of your resume/CV.
   # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.yaml`,
   # and uncomment the lines below.
