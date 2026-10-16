@@ -1,0 +1,642 @@
+---
+layout: null
+title: "SIEVE: Overcoming Topological Obstruction in Equivariant Self-Supervised Learning"
+description: NeurIPS 2026 · Published paper. SE(3)-invariant point cloud embeddings learned through equivariant reconstruction and spherical projection masking.
+permalink: /project/sieve/
+img: project/sieve/images/framework.png
+importance: 1
+category: published
+tags:
+  - Equivariant Learning
+  - Self-Supervised Learning
+  - Point Clouds
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="title" content="SIEVE: Overcoming Topological Obstruction in Equivariant Self-Supervised Learning" />
+    <meta
+      name="description"
+      content="SE(3)-invariant point cloud embeddings learned through equivariant reconstruction and spherical projection masking."
+    />
+    <meta name="keywords" content="SIEVE, equivariant learning, self-supervised learning, point clouds, spherical projection, NeurIPS 2026" />
+    <meta name="author" content="Jongann Lee, Sun Woo Park, Yun Young Choi" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="SIEVE: Overcoming Topological Obstruction in Equivariant Self-Supervised Learning" />
+    <meta
+      property="og:description"
+      content="SE(3)-invariant point cloud embeddings learned through equivariant reconstruction and spherical projection masking."
+    />
+    <meta property="og:url" content="https://jongann-lee.github.io/project/sieve/" />
+    <meta property="og:image" content="https://jongann-lee.github.io/project/sieve/images/framework.png" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="1005" />
+    <meta
+      property="og:image:alt"
+      content="SIEVE architecture: invariant scalar embeddings and spherical projection masking for equivariant point cloud reconstruction."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SIEVE: Overcoming Topological Obstruction in Equivariant Self-Supervised Learning" />
+    <meta
+      name="twitter:description"
+      content="SE(3)-invariant point cloud embeddings learned through equivariant reconstruction and spherical projection masking."
+    />
+    <meta name="twitter:image" content="https://jongann-lee.github.io/project/sieve/images/framework.png" />
+    <meta name="twitter:image:alt" content="SIEVE architecture diagram." />
+    <meta name="citation_title" content="SIEVE: Overcoming Topological Obstruction in Equivariant Self-Supervised Learning" />
+    <meta name="citation_author" content="Lee, Jongann" />
+    <meta name="citation_author" content="Park, Sun Woo" />
+    <meta name="citation_author" content="Choi, Yun Young" />
+    <meta name="citation_publication_date" content="2026" />
+    <meta name="citation_conference_title" content="Advances in Neural Information Processing Systems" />
+    <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2610.21087" />
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://ajax.googleapis.com" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <title>SIEVE: Overcoming Topological Obstruction in Equivariant Self-Supervised Learning | Jongann Lee</title>
+    <link rel="icon" type="image/png" href="{{ '/assets/img/site-icon.png' | relative_url }}" />
+    <link rel="apple-touch-icon" href="{{ '/assets/img/site-icon.png' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/assets/research-template/css/bulma.min.css' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/assets/research-template/css/index.css' | relative_url }}" />
+    <link
+      rel="preload"
+      href="{{ '/assets/research-template/css/bulma-carousel.min.css' | relative_url }}"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <link
+      rel="preload"
+      href="{{ '/assets/research-template/css/bulma-slider.min.css' | relative_url }}"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <noscript>
+      <link rel="stylesheet" href="{{ '/assets/research-template/css/bulma-carousel.min.css' | relative_url }}" />
+      <link rel="stylesheet" href="{{ '/assets/research-template/css/bulma-slider.min.css' | relative_url }}" />
+    </noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="{{ '/assets/research-template/js/fontawesome.all.min.js' | relative_url }}"></script>
+    <script defer src="{{ '/assets/research-template/js/bulma-carousel.min.js' | relative_url }}"></script>
+    <script defer src="{{ '/assets/research-template/js/bulma-slider.min.js' | relative_url }}"></script>
+    <script defer src="{{ '/assets/research-template/js/index.js' | relative_url }}"></script>
+
+    <link rel="canonical" href="https://jongann-lee.github.io/project/sieve/" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "headline": "SIEVE: Overcoming Topological Obstruction in Equivariant Self-Supervised Learning",
+        "description": "SE(3)-invariant point cloud embeddings learned through equivariant reconstruction and spherical projection masking.",
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Jongann Lee",
+            "affiliation": [
+              {
+                "@type": "Organization",
+                "name": "SolverX"
+              },
+              {
+                "@type": "Organization",
+                "name": "University of Illinois Urbana-Champaign"
+              }
+            ]
+          },
+          {
+            "@type": "Person",
+            "name": "Sun Woo Park",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "Max Planck Institute for Mathematics"
+            }
+          },
+          {
+            "@type": "Person",
+            "name": "Yun Young Choi",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "SolverX"
+            }
+          }
+        ],
+        "url": "https://jongann-lee.github.io/project/sieve/",
+        "image": "https://jongann-lee.github.io/project/sieve/images/framework.png",
+        "abstract": "We identify a theoretical incompatibility between 3D point cloud masked autoencoding and SE(3)-equivariant networks. We prove that standard masking triggers a topological collapse, effectively forcing the model to hallucinate orientation without a reference frame. To resolve this, we introduce SIEVE (Scalar Invariant Extraction Via Equivariance), an SE(3)-equivariant self-supervised framework that compresses point cloud geometry into invariant scalar embeddings. At its core is the spherical projection mask, which preserves global pose while obfuscating local semantics, sidestepping the obstruction by construction. Experiments confirm that SIEVE circumvents the predicted collapse where constant and noise masks fail. On downstream point cloud tasks, the resulting embeddings improve over coordinate-based baselines and hand-crafted geometric descriptors, with the largest gains on generalization to unseen shape categories.",
+        "isAccessibleForFree": true,
+        "sameAs": "https://arxiv.org/abs/2610.21087"
+      }
+    </script>
+  </head>
+  <body>
+    <button class="scroll-to-top is-hidden-mobile" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+    <div class="more-works-container">
+      <button class="more-works-btn" onclick="toggleMoreWorks()" title="Return to Jongann Lee’s portfolio">
+        <i class="fas fa-flask"></i>
+        Portfolio
+        <i class="fas fa-chevron-down dropdown-arrow"></i>
+      </button>
+      <div class="more-works-dropdown" id="moreWorksDropdown">
+        <div class="dropdown-header">
+          <h4>Jongann Lee</h4>
+          <button class="close-btn" onclick="toggleMoreWorks()" aria-label="Close portfolio menu">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="works-list">
+          <a href="{{ '/' | relative_url }}" class="work-item">
+            <div class="work-info">
+              <h5>About</h5>
+              <p>Research interests, background, and contact.</p>
+            </div>
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+          <a href="{{ '/publications/' | relative_url }}" class="work-item">
+            <div class="work-info">
+              <h5>Publications</h5>
+              <p>Published papers in planning, robotics, and equivariant learning.</p>
+            </div>
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+          <a href="{{ '/projects/' | relative_url }}" class="work-item">
+            <div class="work-info">
+              <h5>Projects</h5>
+              <p>Explore the rest of my work.</p>
+            </div>
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <main id="main-content">
+      <section class="hero">
+        <div class="hero-body">
+          <div class="container is-max-desktop">
+            <div class="columns is-centered">
+              <div class="column has-text-centered">
+                <h1 class="title is-1 publication-title">SIEVE: Overcoming Topological Obstruction in Equivariant Self-Supervised Learning</h1>
+                <div class="is-size-5 publication-authors">
+                  <span class="author-block"><a href="{{ '/' | relative_url }}">Jongann Lee</a><sup>1,2,*</sup>,</span>
+                  <span class="author-block"
+                    ><a href="https://sites.google.com/wisc.edu/spark483?pli=1&amp;authuser=0" target="_blank" rel="noopener noreferrer"
+                      >Sun Woo Park</a
+                    ><sup>3,*</sup>,</span
+                  >
+                  <span class="author-block"
+                    ><a href="https://www.solverx.ai/company" target="_blank" rel="noopener noreferrer">Yun Young Choi</a><sup>1,†</sup></span
+                  >
+                </div>
+                <div class="is-size-5 publication-authors">
+                  <span class="author-block"><sup>1</sup>SolverX</span><br />
+                  <span class="author-block"><sup>2</sup>University of Illinois Urbana-Champaign</span><br />
+                  <span class="author-block"><sup>3</sup>Max Planck Institute for Mathematics</span>
+                </div>
+                <small
+                  ><span class="eql-cntrb"><sup>*</sup>Equal contribution. <sup>†</sup>Corresponding author.</span></small
+                >
+                <div class="is-size-5 publication-authors"><span class="publication-venue">NeurIPS 2026</span></div>
+                <div class="column has-text-centered">
+                  <div class="publication-links">
+                    <span class="link-block"
+                      ><a
+                        href="https://arxiv.org/pdf/2610.21087"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="external-link button is-normal is-rounded is-dark"
+                        ><span class="icon"><i class="fas fa-file-pdf" aria-hidden="true"></i></span><span>Paper</span></a
+                      ></span
+                    ><span class="link-block"
+                      ><a
+                        href="https://github.com/voltwin-dev/SIEVE_NeurIPS26"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="external-link button is-normal is-rounded is-dark"
+                        ><span class="icon"><i class="fab fa-github" aria-hidden="true"></i></span><span>Code</span></a
+                      ></span
+                    ><span class="link-block"
+                      ><a
+                        href="https://arxiv.org/abs/2610.21087"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="external-link button is-normal is-rounded is-dark"
+                        ><span class="icon"><i class="fas fa-file-alt" aria-hidden="true"></i></span><span>arXiv</span></a
+                      ></span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="hero teaser" aria-labelledby="method-name">
+        <div class="container is-max-desktop">
+          <div class="hero-body">
+            <h2 class="title is-2 has-text-centered" id="method-name">Scalar Invariant Extraction Via Equivariance</h2>
+            <figure class="has-text-centered mx-0">
+              <a href="{{ '/project/sieve/figures/framework.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer"
+                ><img
+                  src="{{ '/project/sieve/images/framework.png' | relative_url }}"
+                  width="960"
+                  height="482"
+                  alt="SIEVE architecture. An equivariant encoder produces invariant scalar embeddings; the vector output is discarded. A decoder reconstructs the original point cloud from those embeddings and spherically projected, noise-perturbed coordinates."
+                  fetchpriority="high"
+              /></a>
+              <figcaption>
+                SIEVE learns SE(3)-invariant per-point embeddings by reconstructing the point cloud through an equivariant bottleneck.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section class="section hero is-light" aria-labelledby="abstract">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3" id="abstract">Abstract</h2>
+              <div class="content has-text-justified">
+                <p>
+                  We identify a theoretical incompatibility between 3D point cloud masked autoencoding and SE(3)-equivariant networks. We prove that
+                  standard masking triggers a topological collapse, effectively forcing the model to hallucinate orientation without a reference
+                  frame. To resolve this, we introduce SIEVE (Scalar Invariant Extraction Via Equivariance), an SE(3)-equivariant self-supervised
+                  framework that compresses point cloud geometry into invariant scalar embeddings. At its core is the spherical projection mask, which
+                  preserves global pose while obfuscating local semantics, sidestepping the obstruction by construction. Experiments confirm that
+                  SIEVE circumvents the predicted collapse where constant and noise masks fail. On downstream point cloud tasks, the resulting
+                  embeddings improve over coordinate-based baselines and hand-crafted geometric descriptors, with the largest gains on generalization
+                  to unseen shape categories.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="masking-obstruction">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3" id="masking-obstruction">Why standard masking with equivariant networks fail</h2>
+              <div class="content has-text-justified">
+                <p>
+                  For point clouds, the coordinates are the sole feature encoding both <strong>where a point is</strong> and
+                  <strong>what the shape is</strong>. This motivates the use of SE(3)-equivariant networks that transform their geometric outputs
+                  consistently when the input rotates or translates.
+                </p>
+                <p>
+                  Standard constant or randomized masking can erase the geometric information needed for reconstruction. We use vector-bundle analysis
+                  to characterize a <strong>topological obstruction</strong> for equivariant reconstruction: masks that discard this structure cannot
+                  reconstruct a broad class of non-trivial geometric representations.
+                </p>
+                <figure class="has-text-centered mx-0">
+                  <a href="{{ '/project/sieve/images/masking-comparison.png' | relative_url }}" target="_blank" rel="noopener noreferrer"
+                    ><img
+                      src="{{ '/project/sieve/images/masking-comparison.png' | relative_url }}"
+                      width="760"
+                      height="427"
+                      alt="Comparison of spherical and random masking for a ring-shaped point cloud. The spherical mask preserves geometry needed for reconstruction, while random masking leads to collapse."
+                      loading="lazy"
+                  /></a>
+                  <figcaption>
+                    Spherical projection retains a geometric reference for reconstruction; geometry-agnostic masking can induce representational
+                    collapse.
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="method">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3" id="method">How SIEVE works</h2>
+              <div class="content has-text-justified">
+                <figure class="has-text-centered mx-0">
+                  <a href="{{ '/project/sieve/figures/framework.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer"
+                    ><img
+                      src="{{ '/project/sieve/images/framework.png' | relative_url }}"
+                      width="760"
+                      height="382"
+                      alt="SIEVE architecture. An equivariant encoder produces invariant scalar embeddings; the vector output is discarded. A decoder reconstructs the original point cloud from those embeddings and spherically projected, noise-perturbed coordinates."
+                      loading="lazy"
+                  /></a>
+                  <figcaption>
+                    SIEVE learns SE(3)-invariant per-point embeddings by reconstructing the point cloud through an equivariant bottleneck.
+                  </figcaption>
+                </figure>
+                <ol>
+                  <li>
+                    <strong>Encode the geometry.</strong> An SE(3)-equivariant encoder produces per-point scalar and vector output. SIEVE keeps the
+                    invariant scalar outputs as the embedding and discards the vector output.
+                  </li>
+                  <li>
+                    <strong>Preserve pose with a spherical projection mask.</strong> Each point is projected onto a unit sphere centered at the point
+                    cloud’s mean. This hides local shape details while preserving geometric orientation and position.
+                  </li>
+                  <li>
+                    <strong>Reconstruct point by point.</strong> The equivariant decoder combines the scalar embeddings with the masked coordinates to
+                    recover the original geometry. A pointwise L1 loss enforces correspondence with the input.
+                  </li>
+                </ol>
+                <p>
+                  The implementation uses a Geometric Algebra Transformer (GATr) backbone. Gaussian perturbations and an additional decoder attention
+                  mask make reconstruction harder and help prevent a trivial radius-only encoding. The encoder’s scalar-input noise is separate from
+                  the noise added to projected coordinates.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="reconstruction">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3" id="reconstruction">Reconstructing different topologies</h2>
+              <div class="content has-text-justified">
+                <p>
+                  We compare spherical projection, constant vector, and ellipsoid noise masks on a synthetic dataset containing a solid cuboid and a
+                  square toroid. Each class has 100 training and 20 test examples. Both GATr and SE(3)-Transformer backbones are evaluated with
+                  matched initialization and hyperparameters.
+                </p>
+                <figure class="has-text-centered mx-0">
+                  <a href="{{ '/project/sieve/figures/validation-loss.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer"
+                    ><img
+                      src="{{ '/project/sieve/images/validation-loss.png' | relative_url }}"
+                      width="760"
+                      height="289"
+                      alt="Log-scale validation L1 loss over training epochs for GATr and SE(3)-Transformer. Spherical masking converges while constant and noise masks stagnate."
+                      loading="lazy"
+                  /></a>
+                  <figcaption>
+                    Validation L1 loss: spherical projection converges below 0.01, while constant and ellipsoid noise masks stagnate around 0.5 in
+                    this experiment.
+                  </figcaption>
+                </figure>
+                <figure class="has-text-centered mx-0">
+                  <a href="{{ '/project/sieve/figures/mask-ablation.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer"
+                    ><img
+                      src="{{ '/project/sieve/images/mask-ablation.png' | relative_url }}"
+                      width="760"
+                      height="381"
+                      alt="Two-row reconstruction comparison for a square toroid and solid cuboid. Red input point clouds are reconstructed in blue using spherical masking; constant and ellipsoid noise masks collapse toward a point."
+                      loading="lazy"
+                  /></a>
+                  <figcaption>
+                    Input points are red and reconstructions are blue. Spherical masking reconstructs both shapes; the other masks collapse.
+                  </figcaption>
+                </figure>
+                <p>
+                  As a control, the paper also studies DeepJEB objects with identical topology, where constant masking can reconstruct successfully.
+                  The failure is therefore tied to topological variety in these experiments, rather than a universal inability of the architecture to
+                  learn.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="embeddings">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3" id="embeddings">Pre-training and invariant embeddings</h2>
+              <div class="content has-text-justified">
+                <p>
+                  SIEVE is pre-trained on approximately 876k point clouds from OpenShape with 2,048 sampled points per cloud. The encoder learns a
+                  scalar embedding for every input point that is invariant to global rotation and translation.
+                </p>
+                <figure class="has-text-centered mx-0">
+                  <a href="{{ '/project/sieve/figures/embeddings.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer"
+                    ><img
+                      src="{{ '/project/sieve/images/embeddings.png' | relative_url }}"
+                      width="760"
+                      height="367"
+                      alt="Pre-trained SIEVE encoder applied to bracket, airplane, and chair point clouds. Colored PCA components visualize per-point invariant scalar embeddings."
+                      loading="lazy"
+                  /></a>
+                  <figcaption>PCA components of the pre-trained SIEVE embeddings visualize the learned pointwise representations.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="downstream">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3" id="downstream">Transfer to downstream tasks</h2>
+              <div class="content has-text-justified">
+                <p>
+                  The pre-trained encoder is <strong>frozen</strong>. Its pointwise scalar embeddings are concatenated with raw coordinates at the
+                  downstream model’s input, allowing existing architectures to use the representation without fine-tuning SIEVE.
+                </p>
+                <h3 class="title is-4">Molecular segmentation</h3>
+                <p>
+                  On RNA molecular segmentation, SIEVE improves accuracy across PointNet++, DeltaNet, and DiffusionNet compared with coordinate-only
+                  inputs and hand-crafted radius or curvature descriptors.
+                </p>
+                <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <caption>
+                      RNA segmentation accuracy (%), paper Table 1. Higher is better; descriptors are added to the coordinates.
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Backbone</th>
+                        <th scope="col">Coordinates</th>
+                        <th scope="col">+ Radius</th>
+                        <th scope="col">+ Curvature</th>
+                        <th scope="col">+ SIEVE</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">PointNet++</th>
+                        <td>71.55</td>
+                        <td>75.54</td>
+                        <td>72.90</td>
+                        <td><strong>86.28</strong></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">DeltaNet</th>
+                        <td>87.21</td>
+                        <td>88.07</td>
+                        <td>86.86</td>
+                        <td><strong>89.58</strong></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">DiffusionNet</th>
+                        <td>81.20</td>
+                        <td>85.89</td>
+                        <td>85.97</td>
+                        <td><strong>89.30</strong></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <h3 class="title is-4">3D shape completion</h3>
+                <p>
+                  PCN is evaluated on eight seen and eight unseen 3D-EPN categories. Average Chamfer loss falls by
+                  <strong>1.62% on seen categories</strong> and <strong>12.5% on unseen categories</strong>. These are category averages; some
+                  individual categories have higher loss with SIEVE. This experiment uses the ShapeNet-pretrained encoder.
+                </p>
+                <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <caption>
+                      3D-EPN category-average L2 Chamfer loss (×10⁴), paper Table 2. Lower is better.
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Test categories</th>
+                        <th scope="col">PCN</th>
+                        <th scope="col">PCN + SIEVE</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Seen</th>
+                        <td>4.6366</td>
+                        <td><strong>4.5615</strong></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Unseen</th>
+                        <td>11.9848</td>
+                        <td><strong>10.4869</strong></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <h3 class="title is-4">Geometric registration</h3>
+                <p>
+                  On ModelNet40, DCP is evaluated with all 40 categories shared between training and testing, and with 20 training categories
+                  separated from 20 test categories. Adding SIEVE reduces rotation and translation error in both settings, with the larger
+                  rotation-error reduction on unseen categories.
+                </p>
+                <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <caption>
+                      Selected ModelNet40 registration metrics, paper Table 3. Lower is better.
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Category split</th>
+                        <th scope="col">Model</th>
+                        <th scope="col">Rotation RMSE</th>
+                        <th scope="col">Translation RMSE</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Shared</th>
+                        <td>DCP</td>
+                        <td>1.214808</td>
+                        <td>0.002040</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Shared</th>
+                        <td>DCP + SIEVE</td>
+                        <td><strong>0.838728</strong></td>
+                        <td><strong>0.001539</strong></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Separate</th>
+                        <td>DCP</td>
+                        <td>2.635946</td>
+                        <td>0.005048</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Separate</th>
+                        <td>DCP + SIEVE</td>
+                        <td><strong>0.935390</strong></td>
+                        <td><strong>0.001509</strong></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p>
+                  The RNA and registration tasks use the OpenShape-pretrained encoder. These comparisons test transfer to established architectures;
+                  the full paper provides all category-level results, metrics, and ablations.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+          <div class="bibtex-header">
+            <h2 class="title">BibTeX</h2>
+            <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+              <i class="fas fa-copy"></i><span class="copy-text">Copy</span>
+            </button>
+          </div>
+          <pre id="bibtex-code"><code>@inproceedings{lee2026sieve,
+  title={SIEVE: Overcoming Topological Obstruction in Equivariant Self-Supervised Learning},
+  author={Lee, Jongann and Park, Sun Woo and Choi, Yun Young},
+  booktitle={Advances in Neural Information Processing Systems},
+  year={2026},
+  eprint={2610.21087},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG},
+  url={https://arxiv.org/abs/2610.21087}
+}</code></pre>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="acknowledgments">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3" id="acknowledgments">Acknowledgments</h2>
+              <div class="content has-text-justified">
+                <p>
+                  This research was supported by the Advanced GPU Utilization Support Program funded by the Government of the Republic of Korea
+                  (Ministry of Science and ICT). SolverX provided in-kind research support through GPU computing resources and LLM-based tools. Sun
+                  Woo Park thanks the Max Planck Institute for Mathematics for its support.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p><a href="{{ '/publications/' | relative_url }}">Back to publications</a></p>
+              <p>
+                This page was built using the
+                <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener noreferrer"
+                  >Academic Project Page Template</a
+                >
+                which was adopted from the <a href="https://nerfies.github.io" target="_blank" rel="noopener noreferrer">Nerfies</a> project page. You
+                are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br />
+                The page design is licensed under a
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer"
+                  >Creative Commons Attribution-ShareAlike 4.0 International License</a
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

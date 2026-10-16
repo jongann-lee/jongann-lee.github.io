@@ -1,189 +1,141 @@
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
-  image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
-
+  name: Jongann Lee
+  label: Ph.D. Student in Electrical and Computer Engineering
+  email: jongann2@illinois.edu
+  location: Urbana, IL, USA
+  summary: Ph.D. student at the University of Illinois Urbana-Champaign researching planning, deep learning, robot learning, and geometric
+    learning.
   social_networks:
-    - network: X
-      username: AlbertEinstein
     - network: GitHub
-      username: example
+      username: jongann-lee
     - network: LinkedIn
-      username: example
-
-  address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
-    countryCode: US
-
+      username: jongann-lee
   sections:
     Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
-        area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
+      - institution: University of Illinois Urbana-Champaign
+        degree: Ph.D. student in Electrical and Computer Engineering
+        location: Urbana, IL, USA
+        start_date: 2025-08
+        end_date: present
         highlights:
-          - Description 1.
-          - Description 2.
-
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
+          - "GPA: 4.00/4.00."
+      - institution: Seoul National University
+        degree: B.E. in Mechanical and Aerospace Engineering
+        location: Seoul, Republic of Korea
+        start_date: 2019-03
+        end_date: 2025-08
         highlights:
-          - Description 1.
-          - Description 2.
-
+          - "GPA: 4.13/4.30."
+          - Summa cum laude; ranked 1st out of 57 in Mechanical and Aerospace Engineering.
+      - institution: Sejong Science High School
+        degree: Early Graduation (top 10% of class)
+        date: "2019"
     Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
+      - company: "LEADCAT Lab, UIUC"
+        position: "Research Assistant"
+        location: "Urbana, IL, USA"
+        start_date: "2025-08"
+        end_date: "present"
+        url: "https://mornik.web.illinois.edu/research/group/"
         highlights:
-          - Relativity
-          - Description 2.
-
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
+          - "Introduced a heterogeneous-visibility formulation for navigation under uncertain connectivity and developed a tree-based path-sampling algorithm with a utility-weighted observation reward; published at IROS 2026 [P2]."
+      - company: "Corteva"
+        position: "Industry Sponsored Research"
+        location: "Remote"
+        start_date: "2025-08"
+        end_date: "2025-12"
         highlights:
-          - Description 1.
-          - Description 2.
-
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
-
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
-
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
-
-    Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
+          - "Built a multi-agent chatbot that delivers transparent, source-grounded explanations of supply-chain optimization outputs for non-technical stakeholders."
+          - "Implemented an agentic RAG workflow in LangGraph with iterative retrieve–tool-use–validate loops; routed queries to role-based expert agents and synthesized answers via an aggregator."
+      - company: "SolverX"
+        position: "AI Researcher"
+        location: "Seoul, South Korea"
+        start_date: "2025-02"
+        end_date: "2025-07"
+        url: "https://www.solverx.ai/"
         highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
-
-    Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
-
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
-
-    Publications:
-      - title: Zur Elektrodynamik bewegter Körper
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
-
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
-
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
-
+          - "Proposed SIEVE, an SE(3)-equivariant self-supervised learning method for point clouds; scaled pre-training to 876k samples, resulting in a first-author NeurIPS 2026 paper [P1]."
+          - "Developed and implemented SE(3)-equivariant deep learning models, including Transformer and Graph Neural Network architectures, using Python, PyTorch, and PyTorch Geometric."
+          - "Successfully trained equivariant models to predict Finite Element Analysis (FEA) simulations, achieving accuracy on par with standard baselines while guaranteeing SE(3)-equivariance."
+      - company: "POLAR Lab, Polytechnique Montréal"
+        position: "Visiting Researcher"
+        location: "Montréal, QC, Canada"
+        start_date: "2024-06"
+        end_date: "2024-10"
+        url: "https://www.polarlab.ca/about"
+        highlights:
+          - "Designed a 2 degrees of freedom ankle joint using a compliant mechanism to enable inversion/eversion movements and dorsiflexion/plantarflexion."
+          - "Fabricated a 3D-printed prototype and integrated it with the existing PERL ankle exoskeleton to validate its mechanical performance."
+      - company: "LARR Lab, SNU"
+        position: "Undergraduate Research Assistant"
+        location: "Seoul, South Korea"
+        start_date: "2023-09"
+        end_date: "2024-06"
+        highlights:
+          - "Developed an automatic tuner for the parameters of the geometric tracking attitude controller for the quadrotor using the TD3 reinforcement learning algorithm."
+          - "Trained the reinforcement learning based tuner using data from a PyBullet quadrotor simulation wrapped in a Gym environment."
+      - company: "InRoL Lab, SNU"
+        position: "Undergraduate Research Intern"
+        location: "Seoul, South Korea"
+        start_date: "2023-03"
+        end_date: "2024-06"
+        url: "https://www.inrol.snu.ac.kr/"
+        highlights:
+          - "Derived a geometric trajectory-tracking controller for a collective pitch-tilting multirotor and established position, yaw, and pitch as differentially flat outputs."
+          - "Proved almost-global exponential attractiveness of the closed-loop dynamics using Lyapunov analysis and validated the controller in MATLAB."
+      - company: "Republic of Korea Air Force (military service)"
+        position: "English-Korean Interpreter/Translator"
+        location: "Osan Air Base, South Korea"
+        start_date: "2020-05"
+        end_date: "2022-02"
+        url: "https://rokaf.airforce.mil.kr/"
+        highlights:
+          - "Enabled clear communication for Air Force Operations Command by accurately interpreting operational dialogues and translating technical documents for ROK and US Air Force leadership."
+    Research Interests:
+      - bullet: Planning
+      - bullet: Deep Learning
+      - bullet: Robot Learning
+      - bullet: Geometric Learning
+    Teaching and Service:
+      - bullet: "Teaching Assistant, ECE 470: Introduction to Robotics, Fall 2026."
+      - bullet: "Reviewer: CDC (2025), ITSC (2025), ICRA (2026)."
+    Extracurricular Activity:
+      - label: SNU Drone Club Bulnabi
+        details: Member, March 2019–June 2024; Vice President, January 2022–July 2023; President, August 2023–June 2024. Grew membership
+          from 10 to 40, organized weekly seminars and winter-break projects, and assembled a 25-member team that won the 2024 Korea Robot
+          Aircraft Competition.
+    Honors and Awards:
+      - title: Kwanjeong Domestic Undergraduate Scholarship
+        date: 2023-02
+        awarder: Kwanjeong Educational Foundation
+      - title: Boeing Korea Scholarship
+        date: 2022-09
+        awarder: Boeing Korea
+      - title: College of Engineering Scholarship for Academic Excellence
+        date: 2019-09
+        awarder: Seoul National University College of Engineering
+      - title: Hanseong Nobel Prodigy Scholarship
+        date: 2018-03
+        awarder: Hanseong Sonjaehan Scholarship Foundation
     Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
+      - name: Programming
+        keywords:
+          - Python
+          - C/C++
+          - MATLAB
+      - name: Libraries
+        keywords:
+          - PyTorch
+          - PyTorch Geometric
+          - Gym
+          - Simulink
+      - name: Robotics and Engineering
+        keywords:
+          - ROS2
+          - PX4-Autopilot
+          - SolidWorks
     Languages:
-      - name: German
-        summary: "Native speaker"
-
+      - name: Korean
+        summary: Native proficiency
       - name: English
-        summary: "Fluent"
-
-    Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
-    Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
-
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
-
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
-
-    Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
-        highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
-
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
-
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+        summary: Bilingual proficiency; TOEFL iBT 117

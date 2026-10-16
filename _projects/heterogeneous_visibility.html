@@ -1,0 +1,671 @@
+---
+layout: null
+title: Navigating in Uncertain Environments with Heterogeneous Visibility
+description: IROS 2026 · Published paper. Planning under uncertain connectivity by balancing traversal cost against the value of observing blocked paths.
+permalink: /project/heterogeneous_visibility/
+img: project/heterogeneous_visibility/images/real_map_TTT_height_bar.png
+importance: 2
+category: published
+tags:
+  - Planning
+  - Navigation
+  - Uncertainty
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="title" content="Navigating in Uncertain Environments with Heterogeneous Visibility - Jongann Lee and Melkior Ornik" />
+    <meta
+      name="description"
+      content="A fast path planner that balances travel cost with useful observations from high-visibility vantage points in environments with unknown blockages."
+    />
+    <meta name="keywords" content="robotics, path planning, uncertain environments, heterogeneous visibility, active sensing" />
+    <meta name="author" content="Jongann Lee, Melkior Ornik" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="University of Illinois Urbana-Champaign" />
+    <meta property="og:title" content="Navigating in Uncertain Environments with Heterogeneous Visibility" />
+    <meta
+      property="og:description"
+      content="A fast path planner that balances travel cost with useful observations from high-visibility vantage points in environments with unknown blockages."
+    />
+    <meta property="og:url" content="https://jongann-lee.github.io/project/heterogeneous_visibility/" />
+    <meta property="og:image" content="https://jongann-lee.github.io/project/heterogeneous_visibility/images/real_map_TTT_height_bar.png" />
+    <meta property="og:image:width" content="990" />
+    <meta property="og:image:height" content="869" />
+    <meta property="og:image:alt" content="Navigating in Uncertain Environments with Heterogeneous Visibility - Research Preview" />
+    <meta property="article:author" content="Jongann Lee" />
+    <meta property="article:section" content="Research" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Navigating in Uncertain Environments with Heterogeneous Visibility" />
+    <meta
+      name="twitter:description"
+      content="A fast path planner that balances travel cost with useful observations from high-visibility vantage points in environments with unknown blockages."
+    />
+    <meta name="twitter:image" content="https://jongann-lee.github.io/project/heterogeneous_visibility/images/real_map_TTT_height_bar.png" />
+    <meta name="twitter:image:alt" content="Navigating in Uncertain Environments with Heterogeneous Visibility - Research Preview" />
+    <meta name="citation_title" content="Navigating in Uncertain Environments with Heterogeneous Visibility" />
+    <meta name="citation_author" content="Lee, Jongann" />
+    <meta name="citation_author" content="Ornik, Melkior" />
+    <meta name="citation_publication_date" content="2026" />
+    <meta name="citation_conference_title" content="IEEE/RSJ International Conference on Intelligent Robots and Systems" />
+    <meta name="citation_pdf_url" content="https://jongann-lee.github.io/project/heterogeneous_visibility/paper.pdf" />
+    <meta name="theme-color" content="#2563eb" />
+    <meta name="msapplication-TileColor" content="#2563eb" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://ajax.googleapis.com" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <title>Navigating in Uncertain Environments with Heterogeneous Visibility - Jongann Lee and Melkior Ornik | Academic Research</title>
+    <link rel="icon" type="image/png" href="{{ '/assets/img/site-icon.png' | relative_url }}" />
+    <link rel="apple-touch-icon" href="{{ '/assets/img/site-icon.png' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/assets/research-template/css/bulma.min.css' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/assets/research-template/css/index.css' | relative_url }}" />
+    <link
+      rel="preload"
+      href="{{ '/assets/research-template/css/bulma-carousel.min.css' | relative_url }}"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <link
+      rel="preload"
+      href="{{ '/assets/research-template/css/bulma-slider.min.css' | relative_url }}"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <noscript>
+      <link rel="stylesheet" href="{{ '/assets/research-template/css/bulma-carousel.min.css' | relative_url }}" />
+      <link rel="stylesheet" href="{{ '/assets/research-template/css/bulma-slider.min.css' | relative_url }}" />
+    </noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="{{ '/assets/research-template/js/fontawesome.all.min.js' | relative_url }}"></script>
+    <script defer src="{{ '/assets/research-template/js/bulma-carousel.min.js' | relative_url }}"></script>
+    <script defer src="{{ '/assets/research-template/js/bulma-slider.min.js' | relative_url }}"></script>
+    <script defer src="{{ '/assets/research-template/js/index.js' | relative_url }}"></script>
+    <link rel="canonical" href="https://jongann-lee.github.io/project/heterogeneous_visibility/" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "headline": "Navigating in Uncertain Environments with Heterogeneous Visibility",
+        "description": "A fast path planner that balances travel cost with useful observations from high-visibility vantage points in environments with unknown blockages.",
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Jongann Lee",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "University of Illinois Urbana-Champaign"
+            }
+          },
+          {
+            "@type": "Person",
+            "name": "Melkior Ornik",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "University of Illinois Urbana-Champaign"
+            }
+          }
+        ],
+        "url": "https://jongann-lee.github.io/project/heterogeneous_visibility/",
+        "image": "https://jongann-lee.github.io/project/heterogeneous_visibility/images/real_map_TTT_height_bar.png",
+        "abstract": "Navigating an environment with uncertain connectivity requires a strategic balance between minimizing the cost of traversal and seeking information to resolve map ambiguities. Unlike previous approaches that rely on local sensing, we utilize a framework where nodes possess varying visibility levels, allowing for observation of distant edges from certain vantage points. We propose a novel heuristic algorithm that balances the cost of detouring to high-visibility locations against the gain in information by optimizing the sum of a custom observation reward and the cost of traversal. We introduce a technique to sample the shortest path on numerous realizations of the environment, which we use to define an edge’s utility for observation and to quickly estimate the path with the highest reward. Our approach can be easily adapted to a variety of scenarios by tuning a single hyperparameter that determines the importance of observation. We test our method on a variety of uncertain navigation tasks, including a map based on real-world topographical data. The method demonstrates lower mean cost of traversal compared to a shortest path baseline that does not consider observation and has exponentially lower computational overhead compared to an existing method for balancing observation with path cost minimization.",
+        "isAccessibleForFree": true,
+        "sameAs": "https://arxiv.org/abs/2603.03495"
+      }
+    </script>
+  </head>
+  <body>
+    <button class="scroll-to-top is-hidden-mobile" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+    <div class="more-works-container">
+      <button class="more-works-btn" onclick="toggleMoreWorks()" title="Return to Jongann Lee’s portfolio">
+        <i class="fas fa-flask"></i>
+        Portfolio
+        <i class="fas fa-chevron-down dropdown-arrow"></i>
+      </button>
+      <div class="more-works-dropdown" id="moreWorksDropdown">
+        <div class="dropdown-header">
+          <h4>Jongann Lee</h4>
+          <button class="close-btn" onclick="toggleMoreWorks()" aria-label="Close portfolio menu">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="works-list">
+          <a href="{{ '/' | relative_url }}" class="work-item">
+            <div class="work-info">
+              <h5>About</h5>
+              <p>Research interests, background, and contact.</p>
+            </div>
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+          <a href="{{ '/publications/' | relative_url }}" class="work-item">
+            <div class="work-info">
+              <h5>Publications</h5>
+              <p>Published papers in planning, robotics, and equivariant learning.</p>
+            </div>
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+          <a href="{{ '/projects/' | relative_url }}" class="work-item">
+            <div class="work-info">
+              <h5>Projects</h5>
+              <p>Explore the rest of my work.</p>
+            </div>
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <main id="main-content">
+      <section class="hero">
+        <div class="hero-body">
+          <div class="container is-max-desktop">
+            <div class="columns is-centered">
+              <div class="column has-text-centered">
+                <h1 class="title is-1 publication-title">Navigating in Uncertain Environments with Heterogeneous Visibility</h1>
+                <div class="is-size-5 publication-authors">
+                  <span class="author-block"><a href="{{ '/' | relative_url }}">Jongann Lee</a>,</span>
+                  <span class="author-block"
+                    ><a href="https://mornik.web.illinois.edu/" target="_blank" rel="noopener noreferrer">Melkior Ornik</a></span
+                  >
+                </div>
+
+                <div class="is-size-5 publication-authors">
+                  <span class="author-block">University of Illinois Urbana-Champaign<br /><span class="publication-venue">IROS 2026</span></span>
+                </div>
+
+                <div class="column has-text-centered">
+                  <div class="publication-links">
+                    <span class="link-block"
+                      ><a
+                        href="{{ '/project/heterogeneous_visibility/paper.pdf' | relative_url }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="external-link button is-normal is-rounded is-dark"
+                        ><span class="icon"><i class="fas fa-file-pdf" aria-hidden="true"></i></span><span>Paper</span></a
+                      ></span
+                    >
+                    <span class="link-block"
+                      ><a
+                        href="https://github.com/jongann-lee/CTP_with_Heterogeneous_Visibility/tree/submission1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="external-link button is-normal is-rounded is-dark"
+                        ><span class="icon"><i class="fab fa-github" aria-hidden="true"></i></span><span>Code</span></a
+                      ></span
+                    >
+                    <span class="link-block"
+                      ><a
+                        href="https://arxiv.org/abs/2603.03495"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="external-link button is-normal is-rounded is-dark"
+                        ><span class="icon"><i class="fas fa-file-alt" aria-hidden="true"></i></span><span>arXiv</span></a
+                      ></span
+                    >
+                    <span class="link-block"
+                      ><a
+                        href="{{ '/project/heterogeneous_visibility/poster.pdf' | relative_url }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="external-link button is-normal is-rounded is-dark"
+                        ><span class="icon"><i class="fas fa-image" aria-hidden="true"></i></span><span>Poster</span></a
+                      ></span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section hero is-light" aria-labelledby="introduction">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3" id="introduction">Introduction</h2>
+              <div class="content has-text-justified">
+                <p>
+                  Traditional path planning under uncertainty, such as the <strong>Canadian Traveller Problem (CTP)</strong> and
+                  <strong>Informative Path Planning (IPP)</strong>, often overlooks <strong>heterogeneous visibility</strong>.
+                </p>
+                <p>In real-world environments, vantage points offer varying levels of information. We propose a framework that:</p>
+                <ul>
+                  <li>
+                    <strong>Exploits High-Visibility Nodes:</strong> Leverages non-local sensing to observe distant edges from specific vantage
+                    points.
+                  </li>
+                  <li>
+                    <strong>Balances Exploration/Exploitation:</strong> Uses an observation reward combined with traversal costs to balance both.
+                  </li>
+                </ul>
+                <p>Our approach prioritizes informative vantage points when planning in high-uncertainty environments.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="problem-setting">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3" id="problem-setting">Problem Setting</h2>
+              <div class="content has-text-justified">
+                <p>
+                  The environment is modeled as a graph <em>G = (V, E)</em> with source <em>v<sub>s</sub></em> and target <em>v<sub>t</sub></em
+                  >.
+                </p>
+                <p><strong>Key Components:</strong></p>
+                <ul>
+                  <li><strong>Traversal Cost:</strong> Each edge <em>e</em> has a cost <em>c(e)</em>.</li>
+                  <li><strong>Visibility Mapping:</strong> <em>vis(v) ⊆ E</em> defines edges observable from node <em>v</em>.</li>
+                  <li>
+                    <strong>Edge Blockages:</strong> A subset <em>E<sub>b</sub> ⊂ E</em> is statically blocked. No prior knowledge of the probability
+                    distribution of blockages is assumed.
+                  </li>
+                </ul>
+                <p>
+                  <strong>Objective:</strong> Navigate from <em>v<sub>s</sub></em> to <em>v<sub>t</sub></em> with minimum cumulative traversal cost.
+                </p>
+                <p>Since minimum path cost is a random variable, the policy should balance information gain with path cost minimization.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="path-sampling">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3" id="path-sampling">Short Diverse Path Sampling</h2>
+              <div class="content has-text-justified">
+                <p>
+                  We generate a <strong>path tree</strong> of depth <em>r</em> by recursively branching <em>n</em> times, where each branch represents
+                  a shortest path computed after removing all edges within an <em>m</em>-hop radius of a node sampled from the parent path.
+                </p>
+                <figure class="has-text-centered mx-0">
+                  <a
+                    href="{{ '/project/heterogeneous_visibility/images/sampling-tree-poster.png' | relative_url }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="{{ '/project/heterogeneous_visibility/images/sampling-tree-poster.png' | relative_url }}"
+                      width="480"
+                      alt="Poster sampling tree with miniature graphs showing shortest paths after adding virtual obstacles at successive branches."
+                      loading="lazy"
+                    />
+                  </a>
+                  <figcaption>Path sampling by recursively adding virtual obstacles.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="path-generation">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3" id="path-generation">Path Generation</h2>
+              <div class="content has-text-justified">
+                <p>
+                  We define a path reward <em>R(P)</em> that balances <strong>cost-efficiency</strong> with the <strong>information gain</strong> of
+                  visiting high-visibility nodes.
+                </p>
+                <p>
+                  <strong>1. Edge Utility (U):</strong> An edge’s utility is based on its frequency in the diverse path set, weighted by depth in the
+                  sampled tree.
+                </p>
+                <p>
+                  <strong>2. Observation Reward (R<sub>obs</sub>):</strong> The sum of utilities for all currently unobserved edges visible from node
+                  <em>v</em>:
+                </p>
+                <div class="table-container">
+                  <math display="block" aria-label="Observation reward is the sum of utilities of visible unobserved edges">
+                    <mrow
+                      ><msub><mi>R</mi><mtext>obs</mtext></msub
+                      ><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo><mo>=</mo
+                      ><munder
+                        ><mo>∑</mo
+                        ><mrow><mi>e</mi><mo>∈</mo><mi>vis</mi><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></munder
+                      ><mi>U</mi><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo
+                      ><msub><mn>1</mn><mtext>obs</mtext></msub
+                      ><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow
+                    >
+                  </math>
+                </div>
+                <p>Already observed edges contribute no further reward, including when encountered again along a candidate path.</p>
+                <p><strong>3. Overall Path Reward:</strong></p>
+                <div class="table-container">
+                  <math display="block" aria-label="Path reward equals lambda times observation reward minus traversal cost">
+                    <mrow
+                      ><mi>R</mi><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo><mo>=</mo><mi>λ</mi
+                      ><munder
+                        ><mo>∑</mo><mrow><mi>v</mi><mo>∈</mo><mi>P</mi></mrow></munder
+                      ><msub><mi>R</mi><mtext>obs</mtext></msub
+                      ><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo><mo>−</mo
+                      ><munder
+                        ><mo>∑</mo><mrow><mi>e</mi><mo>∈</mo><mi>P</mi></mrow></munder
+                      ><mi>c</mi><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow
+                    >
+                  </math>
+                </div>
+                <p>
+                  The path with the <strong>highest reward</strong> is selected from a second sampled path tree. The weight <em>λ</em> controls the
+                  importance of observation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="plateau-experiment">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3" id="plateau-experiment">Experiment: Plateau</h2>
+              <div class="content has-text-justified">
+                <figure class="has-text-centered mx-0">
+                  <a
+                    href="{{ '/project/heterogeneous_visibility/images/plateau_benchmark_map2.png' | relative_url }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="{{ '/project/heterogeneous_visibility/images/plateau_benchmark_map2.png' | relative_url }}"
+                      width="640"
+                      alt="Poster plateau grid: source in green, target in cyan, high-visibility plateaus in yellow, and chokepoint edges in red."
+                      loading="lazy"
+                    />
+                  </a>
+                  <figcaption>Plateaus offer high visibility at a high entry cost.</figcaption>
+                </figure>
+                <p>
+                  We test on a grid with <em>plateaus</em> (high visibility, high entry cost). Chokepoint edges have an independent blockage
+                  probability <em>p</em> (not used during planning). We compare our method against a <strong>Shortest Path (SP)</strong> baseline and
+                  <strong>RPP</strong>.
+                </p>
+                <div class="table-container">
+                  <table class="table is-fullwidth is-narrow">
+                    <caption>
+                      Result on Plateau Environment (p = 0.5)
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Method</th>
+                        <th scope="col">Mean</th>
+                        <th scope="col">Std Dev</th>
+                        <th scope="col">Runtime (ms)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">SP</th>
+                        <td>43.75</td>
+                        <td>16.05</td>
+                        <td>2.5</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">RPP</th>
+                        <td>34.00</td>
+                        <td>0.00</td>
+                        <td>11083</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Ours (λ = 3)</th>
+                        <td>36.00</td>
+                        <td>6.00</td>
+                        <td>94.2</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p>On a different plateau environment we evaluate the performance of our algorithm with different reward ratios <em>λ</em>.</p>
+                <div class="table-container">
+                  <table class="table is-fullwidth is-narrow">
+                    <caption>
+                      Mean Path Cost (Plateau)
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Blockage p</th>
+                        <th scope="col">SP</th>
+                        <th scope="col">λ = 0</th>
+                        <th scope="col">λ = 3</th>
+                        <th scope="col">λ = 10</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">0</th>
+                        <td>22.00</td>
+                        <td>22.00</td>
+                        <td>22.00</td>
+                        <td>22.00</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">0.1</th>
+                        <td>30.10</td>
+                        <td>30.10</td>
+                        <td><strong>29.98</strong></td>
+                        <td>30.51</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">0.2</th>
+                        <td>35.35</td>
+                        <td>35.35</td>
+                        <td><strong>34.77</strong></td>
+                        <td>34.85</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">0.3</th>
+                        <td>39.20</td>
+                        <td>39.20</td>
+                        <td><strong>37.62</strong></td>
+                        <td>37.63</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">0.4</th>
+                        <td>42.46</td>
+                        <td>42.46</td>
+                        <td>39.71</td>
+                        <td><strong>39.63</strong></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">0.5</th>
+                        <td>45.11</td>
+                        <td>45.11</td>
+                        <td>40.98</td>
+                        <td><strong>40.93</strong></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p>RPP achieves the lowest mean cost in the first comparison, while our method requires substantially less computation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="terrain-experiment">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3" id="terrain-experiment">Experiment: Natural Terrain</h2>
+              <div class="content has-text-justified">
+                <p>
+                  We test on a natural terrain environment with mountains (high visibility, high traversal cost). Three obstacles are randomly placed
+                  with probability <em>p</em>.
+                </p>
+                <figure class="has-text-centered mx-0">
+                  <a
+                    href="{{ '/project/heterogeneous_visibility/images/real_map_TTT_height_bar.png' | relative_url }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="{{ '/project/heterogeneous_visibility/images/real_map_TTT_height_bar.png' | relative_url }}"
+                      width="640"
+                      alt="Poster natural terrain comparison showing a blue shortest-path route, a red visibility-aware route, and three black obstacles."
+                      loading="lazy"
+                    />
+                  </a>
+                  <figcaption>Mountains provide high-visibility vantage points.</figcaption>
+                </figure>
+                <p>
+                  The shortest path baseline (blue) and our proposed method (red) are compared; dashed lines show the initial intended path and the
+                  solid lines show the actual path used.
+                </p>
+                <div class="table-container">
+                  <table class="table is-fullwidth is-narrow">
+                    <caption>
+                      Mean Path Cost (Natural Terrain)
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Blockage p</th>
+                        <th scope="col">SP</th>
+                        <th scope="col">λ = 1</th>
+                        <th scope="col">λ = 3</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">0</th>
+                        <td><strong>147.62</strong></td>
+                        <td>150.49</td>
+                        <td>150.80</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">0.2</th>
+                        <td>153.37</td>
+                        <td><strong>151.31</strong></td>
+                        <td>151.61</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">0.4</th>
+                        <td>157.41</td>
+                        <td><strong>152.07</strong></td>
+                        <td>152.40</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">0.6</th>
+                        <td>159.40</td>
+                        <td><strong>152.76</strong></td>
+                        <td>153.19</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">0.8</th>
+                        <td>159.01</td>
+                        <td><strong>153.38</strong></td>
+                        <td>153.97</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="discussion">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3" id="discussion">Discussion</h2>
+              <div class="content has-text-justified">
+                <p>
+                  <strong>Baseline Equivalence:</strong> At <em>λ = 0</em>, the proposed agent’s behavior is equivalent to that of the Shortest Path
+                  (SP) agent.
+                </p>
+                <p>
+                  <strong>Observation Weighting:</strong> Increasing <em>λ</em> assigns higher priority to edge observations, improving performance in
+                  these environments when blockages are likely.
+                </p>
+                <p>
+                  With no blockages, the observation detour increases cost on the natural terrain map. These experiments are simulations, including
+                  the map based on real-world topographical data.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+          <div class="bibtex-header">
+            <h2 class="title">BibTeX</h2>
+            <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+              <i class="fas fa-copy"></i>
+              <span class="copy-text">Copy</span>
+            </button>
+          </div>
+          <pre id="bibtex-code"><code>@inproceedings{lee2026heterogeneousvisibility,
+  title={Navigating in Uncertain Environments with Heterogeneous Visibility},
+  author={Lee, Jongann and Ornik, Melkior},
+  booktitle={IEEE/RSJ International Conference on Intelligent Robots and Systems},
+  year={2026},
+  eprint={2603.03495},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2603.03495}
+}</code></pre>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3">Acknowledgments</h2>
+              <div class="content has-text-justified">
+                <p>
+                  This work was supported by the Office of Naval Research under grants N-00014-25-1-2369 and N-00014-25-1-2519. We thank Manav Vora
+                  for help with the writing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p><a href="{{ '/publications/' | relative_url }}">Back to publications</a></p>
+              <p>
+                This page was built using the
+                <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener noreferrer"
+                  >Academic Project Page Template</a
+                >
+                which was adopted from the <a href="https://nerfies.github.io" target="_blank" rel="noopener noreferrer">Nerfies</a> project page. You
+                are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br />
+                The page design is licensed under a
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer"
+                  >Creative Commons Attribution-ShareAlike 4.0 International License</a
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,5 +1,6 @@
 const fs = require("node:fs");
 const path = require("node:path");
+const crypto = require("node:crypto");
 
 const root = process.cwd();
 
@@ -67,6 +68,20 @@ if (/gem 'al_math',\s*:git =>/.test(gemfile)) {
 
 for (const forbiddenPath of ["_includes", "_layouts", "_sass", "_scripts", "assets/tailwind", "tailwind.config.js", "assets/webfonts"]) {
   if (exists(forbiddenPath)) {
+    // This personal site allows only its explicitly acknowledged theme overrides.
+    const siteOverrides = { _layouts: ["bib.liquid"], _includes: ["header.liquid"] };
+    if (siteOverrides[forbiddenPath] && exists(".al-folio-overrides.yml")) {
+      const files = fs.readdirSync(path.join(root, forbiddenPath));
+      const acknowledgements = read(".al-folio-overrides.yml");
+      const approved = files.every((file) => {
+        if (!siteOverrides[forbiddenPath].includes(file)) return false;
+        const localPath = `${forbiddenPath}/${file}`;
+        const digest = crypto.createHash("sha256").update(read(localPath)).digest("hex");
+        const record = acknowledgements.split(`  ${localPath}:\n`)[1]?.split(/\n  \S/)[0];
+        return record?.includes(`    local_sha256: ${digest}`);
+      });
+      if (files.length > 0 && approved) continue;
+    }
     failures.push(`Starter must not own core component path \`${forbiddenPath}\`; move ownership to the corresponding gem.`);
   }
 }
