@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: Ph.D. Student in Electrical and Computer Engineering · <a href="https://illinois.edu/">University of Illinois Urbana-Champaign</a>
 profile:
