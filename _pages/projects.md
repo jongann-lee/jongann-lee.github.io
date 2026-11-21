@@ -6,9 +6,11 @@ nav: true
 nav_order: 3
 display_categories:
   - published
+  - preprint
   - research
 category_labels:
   published: Published papers
+  preprint: Preprints
   research: Other projects
 horizontal: true
 ---

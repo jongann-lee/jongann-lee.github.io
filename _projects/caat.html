@@ -1,0 +1,490 @@
+---
+layout: null
+title: Coordination of Heterogeneous Teams with Uncertain Task Requirements
+description: arXiv 2026 · Preprint. Learning to jointly coordinate scouting, task execution, and staging, with zero-shot transfer to larger indoor scenarios.
+permalink: /project/caat/
+img: assets/img/projects/caat.png
+importance: 1
+category: preprint
+tags:
+  - Multi-Agent Planning
+  - Reinforcement Learning
+  - Graph Neural Networks
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="title" content="Coordination of Heterogeneous Teams with Uncertain Task Requirements" />
+    <meta
+      name="description"
+      content="A CAAT graph and heterogeneous graph transformer jointly coordinate scouting, task execution, and staging, with zero-shot transfer from outdoor to indoor maps."
+    />
+    <meta
+      name="keywords"
+      content="CAAT, heterogeneous teams, multi-robot task allocation, scouting, staging, graph transformer, reinforcement learning"
+    />
+    <meta name="author" content="Jongann Lee, Melkior Ornik" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Coordination of Heterogeneous Teams with Uncertain Task Requirements" />
+    <meta
+      property="og:description"
+      content="A CAAT graph and heterogeneous graph transformer jointly coordinate scouting, task execution, and staging, with zero-shot transfer from outdoor to indoor maps."
+    />
+    <meta property="og:url" content="https://jongann-lee.github.io/project/caat/" />
+    <meta property="og:image" content="https://jongann-lee.github.io/project/caat/images/framework.png" />
+    <meta property="og:image:alt" content="CAAT graph construction, heterogeneous graph transformer policy, and REINFORCE training." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Coordination of Heterogeneous Teams with Uncertain Task Requirements" />
+    <meta
+      name="twitter:description"
+      content="A CAAT graph and heterogeneous graph transformer jointly coordinate scouting, task execution, and staging, with zero-shot transfer from outdoor to indoor maps."
+    />
+    <meta name="twitter:image" content="https://jongann-lee.github.io/project/caat/images/framework.png" />
+    <meta name="citation_title" content="Coordination of Heterogeneous Teams with Uncertain Task Requirements" />
+    <meta name="citation_author" content="Lee, Jongann" />
+    <meta name="citation_author" content="Ornik, Melkior" />
+    <meta name="citation_publication_date" content="2026/11/16" />
+    <meta name="citation_journal_title" content="arXiv preprint" />
+    <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2611.21828" />
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://ajax.googleapis.com" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <title>Coordination of Heterogeneous Teams with Uncertain Task Requirements | Jongann Lee</title>
+    <link rel="icon" type="image/png" href="{{ '/assets/img/site-icon.png' | relative_url }}" />
+    <link rel="apple-touch-icon" href="{{ '/assets/img/site-icon.png' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/assets/research-template/css/bulma.min.css' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/assets/research-template/css/index.css' | relative_url }}" />
+    <link
+      rel="preload"
+      href="{{ '/assets/research-template/css/bulma-carousel.min.css' | relative_url }}"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <link
+      rel="preload"
+      href="{{ '/assets/research-template/css/bulma-slider.min.css' | relative_url }}"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <noscript>
+      <link rel="stylesheet" href="{{ '/assets/research-template/css/bulma-carousel.min.css' | relative_url }}" />
+      <link rel="stylesheet" href="{{ '/assets/research-template/css/bulma-slider.min.css' | relative_url }}" />
+    </noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="{{ '/assets/research-template/js/fontawesome.all.min.js' | relative_url }}"></script>
+    <script defer src="{{ '/assets/research-template/js/bulma-carousel.min.js' | relative_url }}"></script>
+    <script defer src="{{ '/assets/research-template/js/bulma-slider.min.js' | relative_url }}"></script>
+    <script defer src="{{ '/assets/research-template/js/index.js' | relative_url }}"></script>
+
+    <link rel="canonical" href="https://jongann-lee.github.io/project/caat/" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "headline": "Coordination of Heterogeneous Teams with Uncertain Task Requirements",
+        "description": "A CAAT graph and heterogeneous graph transformer jointly coordinate scouting, task execution, and staging, with zero-shot transfer from outdoor to indoor maps.",
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Jongann Lee",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "University of Illinois Urbana-Champaign"
+            }
+          },
+          {
+            "@type": "Person",
+            "name": "Melkior Ornik",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "University of Illinois Urbana-Champaign"
+            }
+          }
+        ],
+        "datePublished": "2026-11-16",
+        "url": "https://jongann-lee.github.io/project/caat/",
+        "image": "https://jongann-lee.github.io/project/caat/images/framework.png",
+        "isAccessibleForFree": true,
+        "sameAs": "https://arxiv.org/abs/2611.21828"
+      }
+    </script>
+  </head>
+  <body>
+    <button class="scroll-to-top is-hidden-mobile" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+    <div class="more-works-container">
+      <button class="more-works-btn" onclick="toggleMoreWorks()" title="Return to Jongann Lee’s portfolio">
+        <i class="fas fa-flask"></i>
+        Portfolio
+        <i class="fas fa-chevron-down dropdown-arrow"></i>
+      </button>
+      <div class="more-works-dropdown" id="moreWorksDropdown">
+        <div class="dropdown-header">
+          <h4>Jongann Lee</h4>
+          <button class="close-btn" onclick="toggleMoreWorks()" aria-label="Close portfolio menu">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="works-list">
+          <a href="{{ '/' | relative_url }}" class="work-item">
+            <div class="work-info">
+              <h5>About</h5>
+              <p>Research interests, background, and contact.</p>
+            </div>
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+          <a href="{{ '/publications/' | relative_url }}" class="work-item">
+            <div class="work-info">
+              <h5>Publications</h5>
+              <p>Research papers in planning, robotics, and equivariant learning.</p>
+            </div>
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+          <a href="{{ '/projects/' | relative_url }}" class="work-item">
+            <div class="work-info">
+              <h5>Projects</h5>
+              <p>Explore the rest of my work.</p>
+            </div>
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <main id="main-content">
+      <section class="hero">
+        <div class="hero-body">
+          <div class="container is-max-desktop">
+            <div class="columns is-centered">
+              <div class="column has-text-centered">
+                <h1 class="title is-1 publication-title">Coordination of Heterogeneous Teams<br />with Uncertain Task Requirements</h1>
+                <div class="is-size-5 publication-authors">
+                  <span class="author-block"><a href="{{ '/' | relative_url }}">Jongann Lee</a>,</span>
+                  <span class="author-block"
+                    ><a href="https://mornik.web.illinois.edu/" target="_blank" rel="noopener noreferrer">Melkior Ornik</a></span
+                  >
+                </div>
+                <div class="is-size-5 publication-authors"><span class="author-block">University of Illinois Urbana-Champaign</span></div>
+                <div class="is-size-5 publication-authors"><span class="publication-venue">arXiv preprint · 2026</span></div>
+                <div class="column has-text-centered">
+                  <div class="publication-links">
+                    <span class="link-block"
+                      ><a
+                        href="https://arxiv.org/pdf/2611.21828"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="external-link button is-normal is-rounded is-dark"
+                        ><span class="icon"><i class="fas fa-file-pdf" aria-hidden="true"></i></span><span>Paper</span></a
+                      ></span
+                    >
+                    <span class="link-block"
+                      ><a
+                        href="https://github.com/jongann-lee/Heterogeneous_Capability_Planning/tree/submission1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="external-link button is-normal is-rounded is-dark"
+                        ><span class="icon"><i class="fab fa-github" aria-hidden="true"></i></span><span>Code</span></a
+                      ></span
+                    >
+                    <span class="link-block"
+                      ><a
+                        href="https://arxiv.org/abs/2611.21828"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="external-link button is-normal is-rounded is-dark"
+                        ><span class="icon"><i class="fas fa-file-alt" aria-hidden="true"></i></span><span>arXiv</span></a
+                      ></span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="abstract">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3" id="abstract">Abstract</h2>
+              <div class="content has-text-justified">
+                <p>
+                  Coordinating a team of heterogeneous agents to complete tasks with unknown requirements is a challenging multi-agent planning
+                  problem. Agents differ in their ability to discover task requirements and in their ability to engage tasks, so the planner must
+                  coordinate task discovery, execution, and staging. This paper introduces a hierarchical planner that uses a graph neural network
+                  policy to assign actions to agents, then finds a path to the action's location using a shortest-path algorithm. The central part of
+                  our approach is the CAAT graph, which is a graph representation of the planning context consisting of the agents, tasks,
+                  capabilities, and actions. We demonstrate that our learned planner can jointly coordinate a heterogeneous team to simultaneously
+                  discover task requirements and complete tasks in a shorter time compared to baselines that optimize task discovery and task
+                  engagement independently. Furthermore, we show that our policy can zero-shot plan on out-of-distribution settings by training only
+                  on an outdoor map then transferring without finetuning to an indoor map with more agents, tasks, and capabilities than seen during
+                  training.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section hero is-light" aria-labelledby="problem">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3" id="problem">Heterogeneous team coordination when there are multiple capabilities</h2>
+              <div class="content has-text-justified">
+                <p>
+                  Envision a scenario where satellite imagery has identified threats at known locations across mountainous terrain. A heterogeneous
+                  team is tasked with eliminating these threats. Although the target locations are known, the capabilities required to eliminate each
+                  target remain uncertain. Some members possess specialized engagement capabilities but have limited vision, like a bomb defuser
+                  wearing a bulky mask. Others are lightly equipped scouts; they can identify threats from distant viewpoints by traveling to vantage
+                  points (like the top of a hill), but cannot eliminate them. Committing an agent to an incompatible task can result in its loss,
+                  hampering the team's ability to complete the objective.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="hero teaser" aria-labelledby="method-name">
+        <div class="container is-max-desktop">
+          <div class="hero-body">
+            <h2 class="title is-2 has-text-centered" id="method-name">Our solution: CAAT Graph + HGT</h2>
+            <figure class="has-text-centered mx-0">
+              <a href="{{ '/project/caat/figures/framework.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="{{ '/project/caat/images/framework.png' | relative_url }}"
+                  width="2000"
+                  height="1096"
+                  alt="Method overview: a CAAT graph represents the planning context, an HGT policy assigns actions, and REINFORCE trains the policy on simulated missions."
+                  fetchpriority="high"
+                />
+              </a>
+              <figcaption>One graph representation connects task discovery, execution, and staging to a learned planning policy.</figcaption>
+            </figure>
+            <div class="columns is-centered">
+              <div class="column is-four-fifths content">
+                <p>Our solution is the following three steps:</p>
+                <ol>
+                  <li>Build the CAAT graph, a representation of the planning context.</li>
+                  <li>
+                    Compute node embeddings on the CAAT graph using a heterogeneous graph transformer, then define a stochastic policy using the agent
+                    and action embeddings.
+                  </li>
+                  <li>Train this policy using REINFORCE.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="caat-graph">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3" id="caat-graph">Building the CAAT graph</h2>
+              <div class="content has-text-justified">
+                <figure class="has-text-centered mx-0">
+                  <a href="{{ '/project/caat/figures/caat-graph.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">
+                    <img
+                      src="{{ '/project/caat/images/caat-graph.png' | relative_url }}"
+                      width="2000"
+                      height="1062"
+                      alt="Step-by-step CAAT graph construction: extract agents and tasks, add capability nodes, and add execute, observe, stage, and wait actions."
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+                </figure>
+                <p>
+                  Encoding the capabilities and actions as separate nodes allows a pretrained GNN to handle any number of capabilities and provides a
+                  consistent set of actions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section hero is-light" aria-labelledby="policy">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3" id="policy">Learning to coordinate scouting and execution</h2>
+              <div class="content has-text-justified">
+                <p>
+                  A heterogeneous graph transformer processes the different node and edge types. An MLP scores agent–action pairs, and a sequential
+                  decoder assigns feasible actions. A shortest-path planner then routes agents to the assigned locations.
+                </p>
+                <p>
+                  We pretrain the policy using REINFORCE on 12,800 simulated rollouts on WV. During evaluation, all policy weights remain frozen:
+                  transfer to a new map requires no fine-tuning.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="results">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3" id="results">CAAT Graph + HGT can perform out of distribution planning</h2>
+              <div class="content has-text-justified">
+                <p>
+                  We first evaluate on the training map WV, to evaluate whether our policy learns to plan effectively within the training domain. We
+                  then evaluate on unseen maps WA and KTH, which introduce progressively larger deviations from the training setting. All policy
+                  weights remain frozen during evaluation.
+                </p>
+                <ul>
+                  <li><strong>WV:</strong> The training map, with 3–6 agents, 5–9 tasks, and 3 non-scout capabilities.</li>
+                  <li>
+                    <strong>WA:</strong> A different outdoor map with a different starting position, but the same terrain traversal rule, viewshed
+                    visibility, and ranges of capability, agent, and task counts.
+                  </li>
+                  <li>
+                    <strong>KTH:</strong> The largest deviations, with a different traversal model, different visibility, and more capabilities,
+                    agents, and tasks than seen during training: 8 agents, 14 tasks, and 5 non-scout capabilities. This indoor map has 4.6 times as
+                    many nodes as WV or WA.
+                  </li>
+                </ul>
+                <figure class="has-text-centered mx-0">
+                  <a href="{{ '/project/caat/figures/results.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">
+                    <img
+                      src="{{ '/project/caat/images/results.png' | relative_url }}"
+                      width="2000"
+                      height="1205"
+                      alt="WV, WA, and KTH maps with mean-regret comparisons and the winning policy for each evaluation scenario."
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+                  <figcaption>
+                    CAAT Graph + HGT achieves lower average regret than both baselines on all three maps. Error bars show standard deviation across
+                    scenarios.
+                  </figcaption>
+                </figure>
+                <p>
+                  <strong>Scout Then Engage</strong> finishes scouting before executing tasks. <strong>Engage While Scout</strong> runs scouting and
+                  execution simultaneously, optimizing the two subproblems separately. Our policy coordinates them jointly and can stage agents before
+                  requirements are revealed.
+                </p>
+                <p>
+                  On all three maps, our pretrained CAAT Graph + HGT has lower average regret than both baselines. On WV and WA, our method results in
+                  <strong>17.3% and 20.3% lower average regret</strong>, respectively, compared to the best baseline. Even on KTH, an unseen indoor
+                  map with more agents, tasks, and capabilities than seen during training, our method achieves
+                  <strong>12.4% lower average regret</strong> than the best baseline. These results show that our method zero-shot transfers to
+                  out-of-distribution settings without any fine-tuning.
+                </p>
+                <div class="table-container">
+                  <table class="table is-fullwidth is-striped">
+                    <caption>
+                      Mean regret: makespan divided by the full-information Oracle makespan. Lower is better; the Oracle is 1.
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Map</th>
+                        <th scope="col">Scout Then Engage</th>
+                        <th scope="col">Engage While Scout</th>
+                        <th scope="col">CAAT Graph + HGT</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">WV</th>
+                        <td>1.81</td>
+                        <td>1.73</td>
+                        <td><strong>1.43</strong></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">WA</th>
+                        <td>1.80</td>
+                        <td>1.72</td>
+                        <td><strong>1.37</strong></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">KTH</th>
+                        <td>2.17</td>
+                        <td>2.20</td>
+                        <td><strong>1.90</strong></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p>
+                  Our method is better than both baselines for more than 77% of the test problems on each map: 143 of 180 on WV, 159 of 180 on WA, and
+                  7 of 9 on KTH. It improves across a wide range of problems, both within and beyond the training domain.
+                </p>
+                <figure class="has-text-centered mx-0">
+                  <a href="{{ '/project/caat/figures/decision.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">
+                    <img
+                      src="{{ '/project/caat/images/decision.png' | relative_url }}"
+                      width="2000"
+                      height="954"
+                      alt="A planning decision on WV: agent routes and task requirements on the left, and the top four action candidates for each agent on the right."
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+                  <figcaption>snapshot of our planner deciding which action to take</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+          <div class="bibtex-header">
+            <h2 class="title">BibTeX</h2>
+            <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+              <i class="fas fa-copy"></i><span class="copy-text">Copy</span>
+            </button>
+          </div>
+          <pre id="bibtex-code"><code>@misc{lee2026coordination,
+  title={Coordination of Heterogeneous Teams with Uncertain Task Requirements},
+  author={Jongann Lee and Melkior Ornik},
+  year={2026},
+  eprint={2611.21828},
+  archivePrefix={arXiv},
+  primaryClass={cs.MA},
+  url={https://arxiv.org/abs/2611.21828}
+}</code></pre>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p><a href="{{ '/publications/' | relative_url }}">Back to publications</a></p>
+              <p>
+                This page was built using the
+                <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener noreferrer"
+                  >Academic Project Page Template</a
+                >
+                which was adopted from the <a href="https://nerfies.github.io" target="_blank" rel="noopener noreferrer">Nerfies</a> project page. You
+                are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br />
+                The page design is licensed under a
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer"
+                  >Creative Commons Attribution-ShareAlike 4.0 International License</a
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

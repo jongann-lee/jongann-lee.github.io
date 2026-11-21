@@ -51,3 +51,34 @@ The source affiliation “Max Planck Institute of Mathematics” is rendered wit
 Run Prettier, the style contract, `bundle exec jekyll build`, and the override audit. Check the publication title and project card open the same preserved URL, all local assets resolve, PDFs match their sources, and the page works at desktop and mobile widths. Test the Portfolio dropdown and BibTeX copy button in the browser. There must be only one output writer for each project URL.
 
 SIEVE coauthor links were supplied by the user: Sun Woo Park → `https://sites.google.com/wisc.edu/spark483?pli=1&authuser=0`; Yun Young Choi → `https://www.solverx.ai/company`. Preserve these author links and the contribution markers.
+
+## CAAT source provenance
+
+The author requested the new public arXiv work on 20 November 2026. Title,
+authors, affiliation, date, code branch, and research content were checked
+against https://arxiv.org/abs/2611.21828 and the released HTML v1. This is an
+**arXiv preprint**, not a claimed L4DC acceptance. It appears in Publications
+and the homepage's selected papers; Projects has a separate Preprints category.
+
+- `_projects/caat.html`: standalone research page, `layout: null`, permalink
+  `/project/caat/`, using the same vendored template, Portfolio menu, resource
+  buttons, single-column sections, BibTeX copy control, and footer as SIEVE.
+- Author-provided figures: `/Users/jongannlee/Library/CloudStorage/OneDrive-Personal/UIUC Folder/LEADCAT/L4DC_2027/paper_figures/`.
+- `main_figurev2.pdf`, `CAAT_graph_step_by_step.pdf`, and
+  `main_regret_figurev2.pdf` are copied unchanged to `project/caat/figures/` as
+  `framework.pdf`, `caat-graph.pdf`, and `results.pdf`. Browser previews in
+  `project/caat/images/` are Poppler renders at 2000 px. Each preview links to
+  its vector original. No source documents or vendored template assets changed.
+- The supplied results figure has the correct map ordering (WV 1.81/1.73/1.43;
+  WA 1.80/1.72/1.37; KTH 2.17/2.20/1.90), matching the page's accessible table.
+- The combined results section follows the paper’s progression from the WV
+  training domain to unseen WA (same rules and count ranges), then KTH
+  (different models and larger counts). It distinguishes mean regret from
+  per-scenario wins and identifies frozen-weight transfer to KTH.
+- `05_WV_decision.pdf` is copied unchanged as `figures/decision.pdf`; its
+  2000 px Poppler preview is `images/decision.png`. It follows the results
+  with the author’s requested snapshot caption. No new experiment, accepted
+  venue, or video is implied.
+- Paper and arXiv resources link to the released record; Code links to the
+  paper's `submission1` branch. The preprint does not make other unpublished
+  scout-rescue work public.
